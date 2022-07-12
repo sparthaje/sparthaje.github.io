@@ -1,0 +1,23 @@
+body {
+    background-color: #fafafa;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    color:  #cc0000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color:  #770000;
+}
+
+.a {
+    color:  #cc0000;
+    text-decoration: none;
+}
+
+.a:hover {
+    color:  #770000;
+  }

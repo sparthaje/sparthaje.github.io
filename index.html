@@ -8,449 +8,96 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Font AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+    <!-- MY STYLES -->
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/landing.css">
 
     <title>Shreepa Parthaje</title>
 
-    <script>
-      var reverb_open = false;
-      var solar_open = false;
-      var p2a_open = false;
-      var ascent_open = false;
-      var migosnet_open = false;
-      var othelloai_open = false;
-      var opener_open = false;
-      var speakerchain_open = false;
-
-      var reverb = function() {
-        if (reverb_open) {
-          document.getElementById("reverb").style.display = "none";  
-        } else {
-          document.getElementById("reverb").style.display = "inline";
-        }
-        reverb_open = !reverb_open;
-      }
-
-      var solar = function() {
-        if (solar_open) {
-          document.getElementById("solar").style.display = "none";  
-        } else {
-          document.getElementById("solar").style.display = "inline";
-        }
-        solar_open = !solar_open;
-      }
-
-      var p2a = function() {
-        if (p2a_open) {
-          document.getElementById("p2a").style.display = "none";  
-        } else {
-          document.getElementById("p2a").style.display = "inline";
-        }
-        p2a_open = !p2a_open;
-      }
-
-      var ascent = function() {
-        if (ascent_open) {
-          document.getElementById("ascent").style.display = "none";  
-        } else {
-          document.getElementById("ascent").style.display = "inline";
-        }
-        ascent_open = !ascent_open;
-      }
-
-      var migosnet = function() {
-        if (migosnet_open) {
-          document.getElementById("migosnet").style.display = "none";  
-        } else {
-          document.getElementById("migosnet").style.display = "inline";
-        }
-        migosnet_open = !migosnet_open;
-      }
-
-      var othelloai = function() {
-        if (othelloai_open) {
-          document.getElementById("othelloai").style.display = "none";  
-        } else {
-          document.getElementById("othelloai").style.display = "inline";
-        }
-        othelloai_open = !othelloai_open;
-      }
-
-      var opener = function() {
-        if (opener_open) {
-          document.getElementById("opener").style.display = "none";  
-        } else {
-          document.getElementById("opener").style.display = "inline";
-        }
-        opener_open = !opener_open;
-      }
-
-      var speakerchain = function() {
-        if (speakerchain_open) {
-          document.getElementById("speakerchain").style.display = "none";  
-        } else {
-          document.getElementById("speakerchain").style.display = "inline";
-        }
-        speakerchain_open = !speakerchain_open;
-      }
-
-      var expandall = function() {
-        reverb_open = false;
-        solar_open = false;
-        p2a_open = false;
-        ascent_open = false;
-        migosnet_open = false;
-        othelloai_open = false;
-        opener_open = false;
-        speakerchain_open = false;
-        reverb();solar();p2a();ascent();migosnet();othelloai();opener();speakerchain();
-      }
-
-      var collapseall = function() {
-        reverb_open = true;
-        solar_open = true;
-        p2a_open = true;
-        ascent_open = true;
-        migosnet_open = true;
-        othelloai_open = true;
-        opener_open = true;
-        speakerchain_open = true;
-        reverb();solar();p2a();ascent();migosnet();othelloai();opener();speakerchain();
-      }
-
-    </script>
-
-    <style>
-      body {
-        background-color: #ffffef;
-        font-family: Avenir, 'Open Sans';
-        overflow-x:hidden;
-      }
-      #alr {
-        position:absolute; left:5vw; top:5vh; width: 20vw;
-      }
-      a {
-        color:  #cc0000;
-      }
-
-      a:hover {
-        color:  #770000;
-      }
-
-      .a {
-        color:  #cc0000;
-        text-decoration: underline;
-      }
-
-      .a:hover {
-        color:  #770000;
-      }
-
-      #header-row {
-        margin-top: 10vh;
-      }
-      #ppic {
-        margin-top: 6vh;
-        width: 30vw;
-        height: 30vw;
-        margin-left:  8vw;
-        border-radius: 50000px;
-      }
-
-      #ppic-small {
-        width: 60vw;
-        height: 60vw;
-        border-radius: 50000px;
-      }
-
-
-      #hello {
-        font-size:  55px;
-        width:  100%;
-      }
-      #hello-small {
-        font-size:  35px;
-        width:  100%;
-      }
-
-      #description {
-        font-size: 18px;
-      }
-
-      #links {
-        width:  80%;
-      }
-
-      #links a {
-        font-size:  25px;
-      }
-
-      #links-small a {
-        font-size:  18px;
-      }
-
-      .projectsections {
-        text-decoration: underline;
-        font-size: 28px;
-      }
-
-      .projectsections span {
-        visibility: hidden;
-        width: 3vw;
-      }
-
-
-      @media (min-width: 992px) {
-        .cardholder {
-          padding-left: 5%;
-        }
-      }
-
-      .card-outer {
-        padding: 5px;
-      }
-
-      .card {
-        border-radius: 5px;
-        padding: 10px;
-        background-color: #ffffef;
-        border-color: #8a9ca3;
-        font-size: 20px;
-      }
-      .down {
-        font-size: 15px; margin-left:10px;
-      }
-
-      .card:hover {
-        background-color: #efefdf; color: #cc0000;
-      }
-
-      .card:hover .extra {
-        color:  black; 
-        text-decoration: none;
-      }
-      
-      .extra {
-        display: none;
-        font-size:  15px;
-        /*text-align: left;*/
-      }
-
-    </style>
-
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- <div id="alr" class="alert alert-danger" style="font-size:20px;" role="alert">
-              Click on any card to learn more ! 
-    </div> -->
-    <div class='container-fluid'id='header-row'>
-      <div class="row">
-        <div class="col-lg-5 d-none d-md-block">
-          <img src="pp.png" id="ppic"/>
-          <div class="container" style="margin-left: 2vw;">
-            <div class="row">
-              <div class="col-lg-12" align="center">
-                <br/>
-                <br/>
-                <div class="container" id="links">
-                  <div class="row">
-                    <div class="col-4"><a href="resume.pdf" target="_blank">RESUMÉ</a></div>
-                    <div class="col-4"><a href="https://github.com/sparthaje" target="_blank">GITHUB</a></div>
-                    <div class="col-4"><a href="https://www.linkedin.com/in/shreepa-parthaje-352241192/" target="_blank">LINKEDIN</a></div>
-                  </div>
-                </div>
-                <br/>
-                <span id="description">Emails: <a href="mailto:shreepa.parthaje@gmail.com">shreepa.parthaje@gmail.com</a></span>
-                <span id="description"><a href="mailto: cbf2xv@virginia.edu">cbf2xv@virginia.edu</a></span>
-              </div>
-            </div>
-          </div>
+    
+    <div class='container'>
+        <div class="row" id="photo">
+            <img src="img/landing/profile.png"/>
         </div>
-        <div class="col-md-12 d-md-none" align="center">
-          <img src="pp.png" id="ppic-small"/>
-        </div>
-        <div class="col-lg-7" align="center">
-          <span class="d-none d-md-block" id="hello" style="margin-left:-8vw;">Hi I'm Shreepa Parthaje!</span><br/>
-          <span class="d-md-none" id="hello-small">Hi I'm Shreepa Parthaje!<br/></span>
-          <span id="description" class="d-md-none">Emails: <a href="mailto:shreepa.parthaje@gmail.com">shreepa.parthaje@gmail.com</a></span>
-          <span id="description" class="d-md-none"><a href="mailto:cbf2xv@virginia.edu">cbf2xv@virginia.edu</a></span>
-          <div class="col-md-12 d-md-none" align="center">
-            <br/>
-            <div class="container" id="links-small">
-              <div class="row">
-                <div class="col-4"><a href="resume.pdf" target="_blank">RESUMÉ</a></div>
-                <div class="col-4"><a href="https://github.com/sparthaje" target="_blank">GITHUB</a></div>
-                <div class="col-4"><a href="https://www.linkedin.com/in/shreepa-parthaje-352241192/" target="_blank">LINKEDIN</a></div>
-              </div>
-              <br/>
-              <div class="row">
-              <div class="col-2"></div>
-              <div class="col-8" align="center">
-                <a onclick="expandall()" class="a">(expand all cards)</a>
-                <a onclick="collapseall()" class="a">(collapse all cards)</a>
-              </div>
-              <div class="col-2"></div>
-            </div>
-          </div>
-          <br/>
-          </div>
 
-          <div class="container">
-            <div class="row projectsections">
-                <span class="d-none d-md-block">.</span>
-                Currently:
+        <div class="row" id="title">
+           <b>Shreepa Parthaje</b>
+        </div>
+
+
+        <div class="row" id="icons">
+            <div class="col-4">
+                <a href="https://github.com/sparthaje" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-            <div class="row cardholder">
-              <!--  -->
-              <div class="col-lg-12 col-md-12 card-outer">
+            <div class="col-4">
+                <a href="mailto:shreepa.parthaje@gmail.com"><i class="fa fa-envelope"></i></a>
+            </div>
+            <div class="col-4">
+                <a href="https://www.linkedin.com/in/shreepa-parthaje-352241192/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+       </div>
+
+        <div class="row" id="subtitle">
+            <div class="col-4">
+                <span class="sstext"><a href="docs/resume.pdf" target="_blank">RESUMÉ</a></span>
+            </div>
+            <div class="col-1">
+                <span class="sstext">|</span>
+            </div>
+            <div class="col-4">
+                <span class="sstext"><a href="gallery.html">PROJECTS</a> </span>
+            </div>
+         </div>
+
+
+        <!-- <div class="row sub-subtitle" style="padding-top: 5px">
+            Currently:
+        </div> -->
+
+       
+
+        <div class="row cardholder">
+            <div class="col-lg-12 col-md-12 card-outer">
                 <div class="card">
-                 <span> Computer Science + Data Science @ University of Virginia <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/University_of_Virginia_Rotunda_logo.svg/1200px-University_of_Virginia_Rotunda_logo.svg.png" width="25px"/></span>
-                </span>
+                    <span>Intern @ 
+                    Amazon Web Services 
+                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd3gih7jbfe3jlq.cloudfront.net%2FAWS-Podcast-Title-Art.jpg&f=1&nofb=1" width="25px"/>
                 </div>
-              </div>
-
-              <div class="col-lg-12 col-md-12 card-outer">
-                <div class="card" onclick="solar()">
-                  <span>Embedded Software @ 
-                  <a href="https://www.solarcaratuva.org/" target="_blank">UVA Solar Car Team</a> ☀️
-                  <br/>
-                  <div id="solar" class="extra">
-                    <span style="text-align: left">
-                      Currently, I'm a member of the embedded software team at UVA Solar Car. The software I've written interfaces with the car's Power AUX and ECU boards. This involves control logic for the headlights/turn signals, sending and parsing messages on the CAN bus, and more.  
-                  </span>
-                  </div>
-                </span>
                 </div>
-              </div>
-            </div>
-            <br/>
 
-            <div class="row projectsections">
-                <span class="d-none d-md-block">.</span>
-                Previously:
+            <div class="col-lg-12 col-md-12 card-outer">
+                <div class="card">
+                <span>Computer Science @ 
+                University of Virginia 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/University_of_Virginia_Rotunda_logo.svg/1200px-University_of_Virginia_Rotunda_logo.svg.png" width="25px"/>
+                </div>
             </div>
 
-            <div class="row cardholder">
-              <div class="col-lg-6 col-md-12 card-outer">
-                <div class="card" onclick="reverb()">
-                  <span>Flight Software Lead @ 
-                  <a href="https://activities.tjhsst.edu/cubesat/" target="_blank">TJREVERB</a> 🛰️
-                  <br/>
-                  <div id="reverb" class="extra">
-                    2019 - 2021 <br/>
-                    The TJREVERB team designed a 2U CubeSat to test a SATT-4 radio vs. an Iridium ground station radio in Low Earth Orbit (LEO) as a part of NASA's ELeNa mission. Our flight software was written in Python and ran on a Raspberry Pi flight computer. In addition to team lead responsibilities, I wrote the primary CONOPS and helped design the state machine. 
-                  </div>
+            <div class="col-lg-12 col-md-12 card-outer">
+                <div class="card">
+                <span>Embedded Software Lead @ 
+                <a href="https://www.solarcaratuva.org/" target="_blank">UVA Solar Car</a> ☀️
                 </div>
-              </div>
-              <div class="col-lg-6 col-md-12 card-outer">
-                <div class="card" onclick="p2a()">
-                  <span>Software Intern @ 
-                  <a href="https://capitolcanary.com/" target="_blank">Capitol Canary</a> 🧑‍⚖️
-                <br/>
-                <div id="p2a" class="extra">
-                    2019 Summer <br/>
-                    Previously known as Phone2Action, at Capitol Canary my team developed a virtual reality application which used IBM Watson to bring voice control to the company's flagship grassroots activism product. This included working with Unity to develop the VR product and Express.js/Vue.js to develop the login portal . 
-                  </div>
-               </div>
-              </div>
             </div>
 
-            <br/>
-            <div class="row projectsections">
-                <span class="d-none d-md-block">.</span>
-                Cool Projects:
+            <div class="col-lg-12 col-md-12 card-outer">
+                <div class="card">
+                <span>Perception @ 
+                <a href="https://autonomousracing.dev/" target="_blank">Cavalier Autonomous Racing</a> 🏎️
+                </div>
             </div>
-
-            <div class="row cardholder">
-              <div class="col-lg-6 col-md-12 card-outer">
-                <div class="card" onclick="ascent()">
-                  <span>
-                  Ascent 🚀
-                  </span>
-                  <br/>
-                  <div id="ascent" class="extra">
-                    Ascent is  a <a href="https://en.wikipedia.org/wiki/VTOL" target="_blank">VTOL</a> aircraft that uses a 2 axis gimbaled nozzle to control thrust flow from counter rotating propellers. My team’s goals were to research different control algorithms using the Ascent craft. I simulated and tuned PID control loops and Kalman Filter in MATLAB in addition to helping write C++ flight software with PlatformIO for a Teensy flight computer. 
-                    <br/>
-                    <img width="330vw" src="ascentim1.png"  /><br/>
-                    Gimballed nozzle ^
-                    <video width="330vw" controls muted>
-                        <source src="ascentim2.mp4" type="video/mp4">
-                      Your browser does not support the video :( .
-                      </video><br/>
-                      ^ Testing the gimbal system's response time to various Δθ
-                      <img width="330vw" src="ascentim3.png"/><br/>
-                      Simulations in MATLAB ^
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 card-outer">
-                <div class="card" onclick="migosnet()">
-                  <span>
-                  MigosNet 🎵🗒️
-                  </span>
-                  <br/>
-                  <div id="migosnet" class="extra" style="text-align: center;">
-                    3 discrete Long Short-Term Memory networks to generate <a href="https://en.wikipedia.org/wiki/Migos" target="_blank">Migos</a> lyrics letter by letter. I wanted to observe trends in words spelt correctly vs horridly incorrectly to highlight trends in the source work. Some interesting observations I noted was the frequent triplet rhymes found in the chorus and the ability of the network to “recover” and spell the next word correct ofter misspelling the previous.  
-                    <br/>
-                    <a href="https://sparthaje.github.io/MigosNet/" target="_blank">Check out a demo here!</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 card-outer">
-                <div class="card" onclick="othelloai()">
-                  <span>
-                  OthelloAI 🎲
-                  </span>
-                  <br/>
-                  <div id="othelloai" class="extra">
-                    Min-max algorithm implemented in Python to play Othello moves given a second. Heuristic + non-deterministic algorithms are weighted based the max reachable depth to score each move. Bit operations on bit boards (bit arrays that represent the game board) were used to make game calculations <b style="color: #cc0000;">really</b> fast and go deeper in the tree.  
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 card-outer">
-                <div class="card" onclick="speakerchain()">
-                  <span>
-                  Speaker Chain 🎵⚡
-                  </span>
-                  <br/>
-                  <div id="speakerchain" class="extra">
-                    I designed an analog circuit with an op-amp amplifying stage, push-pull amplifier, and a low pass RC filter to deliver clean audio signal from a phone to a speaker. <br/>Watch the video below to hear it ! 
-                     <video controls width="320" height="240">
-                        <source src="speakerchain.mp4" type="video/mp4">
-                      Your browser does not support the video :( .
-                      </video> 
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 card-outer">
-                <div class="card" onclick="opener()">
-                  <span>
-                  Opener 🗃️
-                  </span>
-                  <br/>
-                  <div id="opener" class="extra" style="text-align: center;">
-                    <img width="100" height="100" src="opener.png"  />
-                    <br/>
-                    <span style="color: black;">Open source MacOS Keybinding Utility Written 100% in Swift</span> <br/>
-                    <a href="https://github.com/sparthaje/opener" target="_blank">Check it out!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br/>
-            <div class="row">
-              <div class="col-2"></div>
-              <div class="col-8" align="center">
-                <a onclick="expandall()" class="a">(expand all)</a>
-                <a onclick="collapseall()" class="a" style="margin-left:2vw;">(collapse all)</a>
-              </div>
-              <div class="col-2"></div>
-            </div>
-
-          </div>
         </div>
-      </div>
-      </div>
+        
+       
+         
     </div>
+
   </body>
 </html>
