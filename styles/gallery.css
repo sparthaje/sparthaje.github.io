@@ -9,30 +9,6 @@
     text-align: center;
 }
 
-#footer {
-    background-color: #f0f0f0;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px;
-    
-    width: 150px;
-    position: fixed;
-    z-index: 1;
-    bottom: 15px;
-    left: 15px;
-    overflow-x: hidden;
-    
-    padding-top: 5px;
-    padding-left: 8px;
-
-    border-radius: 35px;
-}
-
-#footer a {
-    padding: 0px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-}
-
 #toc {
     justify-content: center;
     text-align: center;
@@ -51,7 +27,7 @@
  }
 
 .gallerytitle {
-   font-size: 40px;
+   font-size: 30px;
    padding-top: 2vh;
    display: flex;
    flex-flow: row wrap;
