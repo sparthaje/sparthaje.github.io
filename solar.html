@@ -23,6 +23,7 @@
 
     <!-- MY STYLES -->
     <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/gallery.css">
 
     <title>Shreepa Parthaje</title>
 		<meta charset="utf-8">
@@ -32,18 +33,44 @@
                 margin: 0; 
             }
 
-            #scroll-window {
-                height: 1000000vh;
+            .container-fluid {
+                position: fixed;
             }
 
-            .container {
-                margin-top: 15%;
+            #gallery {
+                padding-right: 5vw;
+                padding-top: 10vh;
             }
 
             canvas {
                 position: fixed;
-                top: 10%;
-                left: 10%;
+                top: 10vh;
+                left: 5vw;
+            }
+
+            .card {
+                position: fixed;
+                bottom: 10vh;
+                left: 7vw;
+
+                height: 45vh;
+                width: 26vw;
+                background-color: black;
+                border-radius: 15px;
+                /* bottom: 10%; */
+                display: inline-block;
+            }
+
+            .card-controls {
+                position: fixed;
+                bottom: 10vh;
+                left: 5vw;
+
+                display: inline-block;
+                width: 2vw;
+                background-color: red;
+                line-height: 45vh;
+                height: 45vh;
             }
 		</style>
 	</head>
@@ -51,10 +78,25 @@
 		<script src="scripts/three.js"></script>
 		<script src="scripts/solar.js"></script>
 
-        <div class="container">
-            <div class="row"> <div class="col-6"></div>
-                <div class="col-6" id="content">
-                    <h1>Lorem ipsum dolor sit amet</h1>
+        <div class="slideshow">
+            <div class="card-controls">
+                L
+            </div>
+            <div class="card">
+
+            </div>
+            <div class="card-controls" style="left: 33vw;" onclick="scrollTest();">
+                R
+            </div>
+        </div>
+        
+        <div class="container-fluid" id="gallery">
+            <div class="row">
+                
+            </div>
+            <div class="row"> <div class="col-5"></div>
+                <div class="col-7" id="content">
+                    <h1 style="text-align: center;">Lrem ipsum dolor sit amet</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper dui est, porta vestibulum lorem mattis ac. In hac habitasse platea dictumst. Suspendisse bibendum maximus metus id hendrerit. In vulputate augue a nulla dictum, non dapibus dui rhoncus. Nunc egestas nec ligula vel ultricies. Morbi feugiat id lorem sit amet vulputate. Vestibulum imperdiet lacus vitae pellentesque lacinia. Ut mi eros, viverra sed libero ac, vehicula rutrum turpis. Nam sem nisl, eleifend eu ornare ut, tempor nec dolor. Morbi convallis ultricies leo, a congue tortor porta sit amet. Nunc sit amet ullamcorper dolor, eget ornare elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi nec egestas enim. Nulla facilisi. Nullam ullamcorper, justo ac commodo cursus, erat tortor iaculis tortor, vitae dignissim urna dui at metus.
                         <br><br/>
@@ -67,6 +109,6 @@
                 </div>
             </div>
         </div>
-
+        <div style="min-height: 1000vh;"></div>
 	</body>
 </html>
