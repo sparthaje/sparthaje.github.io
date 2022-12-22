@@ -1,5 +1,5 @@
 const step_size = 0.05;
-const canvas_width = window.innerWidth * 0.3;
+const canvas_width = window.innerWidth * 6.5/12;
 const canvas_height = window.innerHeight * 0.3
 
 window.scrollBy({top: -document.documentElement.scrollTop})
@@ -21,6 +21,7 @@ scene.add( cube );
 
 cube.rotation.x = 2
 cube.rotation.z = -0.5
+cube.position.z += 0.6
 
 var light = new THREE.DirectionalLight(0xffffff);
 light.position.set(0, 2, 2);
@@ -50,7 +51,6 @@ window.addEventListener("scroll", (event) => {
     
     let direction = currentPosition > previousPosition ? 1 : -1;
     // let delta = direction * (step_size);
-    console.log(contentHeight)
     let delta = 3 * (currentPosition - previousPosition) / contentHeight;
 
     // if (cube.rotation.y + delta < 0) 
@@ -60,7 +60,7 @@ window.addEventListener("scroll", (event) => {
     // else
         cube.rotation.z += delta;
 
-    console.log(cube.rotation.y)
+    console.log(cube.rotation.z)
     previousPosition = currentPosition;
 })
 
@@ -70,7 +70,6 @@ function animate() {
 }
 
 function scrollTest() {
-    console.log("HI")
     window.scrollBy({top: 15})
 }
 

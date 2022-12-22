@@ -23,175 +23,174 @@
 
     <!-- MY STYLES -->
     <link rel="stylesheet" href="styles/theme.css">
-    <link rel="stylesheet" href="styles/landing.css">
-    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="styles/carousel.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/info.css">
 
     <title>Shreepa Parthaje</title>
 
-    <script type="text/javascript">
-        document.addEventListener('click', function (e) {
-            const outputString1 = e.target.id.charAt(0);
-            if (outputString1 == 'l') {
-                var i = e.target.id + 'l';
-                document.getElementById(i).scrollIntoView();
-            }
-        }, false);
+    <script>
+
+        // setInterval(() => {
+        //     let el = document.getElementById("container")
+        //     let el2 = document.getElementById("captions")
+        //     el.style.left = "-" + current_pos + "px";
+        //     el2.style.left = "-" + current_pos + "px";
+        // }, 100)
+
+        test = () => {
+            let el = document.getElementById("container")
+            let el2 = document.getElementById("captions")
+            let el3 = document.getElementsByTagName("footer")[0]
+
+            // if (document.body.dataset.nav === "false") {
+            //     el.style.marginTop = "-40vh";
+            //     el2.style.marginTop = "-40vh";
+            //     el3.marginTop = "40vh";
+            // } else {
+            el.style.marginTop = "8vh";
+            el2.style.marginTop = "4.5vh";
+            el3.style.marginTop = "80vh";
+            // }
+
+            document.body.dataset.nav = !document.body.dataset.nav;
+            console.log(document.body.dataset.nav)
+            
+        }
+
+        const toggleNav = () => {
+            document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
+        }
+
+        window.onload = async (event) => {
+            let el = document.getElementById("container")
+            let el2 = document.getElementById("captions")
+
+            window.setTimeout(() => {
+                el.style.left = "-30px";
+                el2.style.left = "-30px";
+            }, 100);
+
+            window.setTimeout(() => {
+                el.style.left = "10px";
+                el2.style.left = "10px";
+            }, 600);
+
+            window.setTimeout(() => {
+                el.style.left = "0px";
+                el2.style.left = "0px";
+
+                el.style.transition = "all 0.15s";
+                el2.style.transition = "all 0.15s";
+            }, 1100);
+        }
+
+        window.onscroll = (event) => {
+            let current_pos = window.scrollY;
+            let el = document.getElementById("container")
+            let el2 = document.getElementById("captions")
+            let boxes = document.getElementsByClassName("box")
+            let boxWidth = boxes[0].offsetWidth
+            
+            // if (current_pos > boxWidth * boxes.length / 1.875) return;
+
+            el.style.left = "-" + current_pos + "px";
+            el2.style.left = "-" + current_pos + "px";
+            
+        }
     </script>
-
-    <title>Shreepa Parthaje</title>
 
 </head>
 
-<body>
+<body id="body" data-nav="true">
 
-    <div class='container'>
-        <div class="row" id="photo">
-            <img src="img/landing/profile.png" />
-        </div>
+    <!-- Navbar 2 -->
+    <nav class="nav nav-2">
+        <a class="nav-logo" href="#">shreepa parthaje</a>
+        <ul class="nav-list">
+        <li>
+            <a href="docs/resume.pdf">resumé</a>
+        </li>
+        <li>
+            <a href="https://github.com/sparthaje" target="_blank"><i class="fab fa-github"></i></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/shreepa/" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
+        </li>
+        <li>
+            <a href="mailto:shreepa.parthaje@gmail.com"><i class="fa fa-envelope"></i></a>
+        </li>
+        </ul>
+    </nav>
+    <!-- <div id="position">
+        <span>
+            Currently: Leading Software @ UVA Solar  ♢
+            <a href="https://autonomousracing.dev/" target="_blank">Cavalier Autonomous Racing</a> 
+        </span>
+    </div>   -->
+    
+    <div id="container"> 
+        <div>
 
-        <div class="row" id="title">
-            <b>Shreepa Parthaje</b>
-        </div>
-
-
-        <div class="row" id="icons">
-            <div class="col-lg-3 col-4">
-                <a href="https://github.com/sparthaje" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-            <div class="col-lg-3 col-4">
-                <a href="mailto:shreepa.parthaje@gmail.com"><i class="fa fa-envelope"></i></a>
-            </div>
-            <div class="col-lg-3 col-4">
-                <a href="https://www.linkedin.com/in/shreepa-parthaje-352241192/" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-            </div>
-            <div class="col-lg-3 col-12">
-                <span class="sstext"><a href="docs/resume.pdf" target="_blank">RESUMÉ</a></span>
-            </div>
-        </div>
-
-
-
-        <div class="row cardholder">
-            <div class="col-lg-12 col-md-12 card-outer">
-                <div class="card">
-                    <span>Computer Science @
-                        University of Virginia
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/University_of_Virginia_Rotunda_logo.svg/1200px-University_of_Virginia_Rotunda_logo.svg.png"
-                            width="25px" style="width:25px; height: 25px;" />
-                </div>
+            <div class="box" style="background-image: url('img/landing/profile.png'); width: 73.92vh;">
+                
             </div>
 
-            <div class="col-lg-12 col-md-12 card-outer">
-                <div class="card">
-                    <span>Software Operations Lead @
-                        <a href="https://www.solarcaratuva.org/" target="_blank">UVA Solar Car</a> ☀️
-                </div>
+            <div class="box" style="background-image: url('img/carousel/solarcar.jpg');">
+                
             </div>
 
-            <div class="col-lg-12 col-md-12 card-outer">
-                <div class="card">
-                    <span>Perception @
-                        <a href="https://autonomousracing.dev/" target="_blank">Cavalier Autonomous Racing</a> 🏎️
-                </div>
+            <div class="box" style="background-image: url('img/carousel/car.jpg');"></div>
+            
+            <div class="box" style="background-image: url('img/carousel/ascent.jpeg');">
+                
             </div>
-        </div>
-        <br />
 
-        <hr />
-        <div class="row" id="title" ><b>Project Blog</b></div>
-
-        <div class="row" id="toc">
-            <div style="background-color: #fafafa; ">
-                <span style="padding-bottom: 5px;">
-                    <a class="a ln" id="l2">Solar Car</a> ♢
-                    <a class="a ln" id="l1">Ascent</a> ♢
-                    <a class="a ln" id="l3">Speaker Chain</a> ♢
-                    <a class="a ln" id="l4">MigosNet</a> ♢
-                    <a class="ln" href="https://github.com/sparthaje/Opener" target="_blank">Opener</a>
-                </span>
+            <div class="box" style="background-image: url('img/carousel/speaker.jpg');">
+                
             </div>
-            <hr style="padding-bottom: 0px"/>
-        </div>
 
-        <div class="row gallerytitle" id="l2l"><b>UVA Solar Car Team</b></div>
-        <hr />
-        <div class="row gallery-sub-title">
-            On the UVA Solar Car team, we are designing a fully electric car which recharges its batteries via solar
-            panels for the Formula One Grand Prix competition. I'm leading the software operations team which is comprised of two subteams: embedded software and
-            telemetry visualization. The embedded software team has over ten members to develop our C++ distributed
-            embedded system. We are designing software to handle throttle control, develop natural regenerative breaking, data 
-            collection, and more! In the near future we will be looking into developing reliable cruise control software. 
-            The telemetry visualization team is building a full visualization suite in React for the race pit, using a Python 
-            server to handle processing radio messages from the car. 
-        
-            <a href="https://github.com/solarcaratuva/Rivanna2" target="_blank">Click here to view our embedded software code</a>
-        </div>
-        <div class="gallery">
-            <div class="img"><img src="img/g/l2/4.png" alt=""></div>
-            <div class="img"><img src="img/g/l2/1.jpg" alt=""></div>
-            <div class="img">
-                <video controls muted>
-                    <source src="img/g/l2/2.MOV#t=0.01" type="video/mp4">
-                </video>
+            <div class="box" style="background-image: url('img/carousel/othello.jpg');">
+                
             </div>
-            <div class="img"><img src="img/g/l2/3.jpg" alt=""></div>
-        </div>
-
-
-        <div class="row gallerytitle" id="l1l"><b>Ascent</b></div>
-        <hr />
-        <div class="row gallery-sub-title">
-            Ascent is a research project where I worked in a team 3 to develop a vertical take off and landing aircraft. We 
-            wrote the flight software in C++ using the platform.io framework for a Teensy 3.6 flight computer. The attitude was controlled via 
-            a thrust vector control system. All the air being pushed out the propellers got funneled into a nozzle which could be angled to angle thrust. 
-            We did all the simulations in Simulink in MATLAB for the PID gains. Our position estimating Kalman filter was simulated in Python, 
-            and verified in hardware. We fell short of a successful flight as our implementation of the PID loop in simulations failed to match 
-            our implementation of the PID loop in the flight software. With the summer after the school year ending and us going off to college, we ended the project with a
-            successful thrust vector system, strong modeling of the physics behind the system, and a reliable state estimating system. 
-        </div>
-        <div class="gallery">
-            <div class="img">
-                <video controls>
-                    <source src="img/g/l1/1.mp4#t=0.01" type="video/mp4">
-                </video>
-            </div>
-            <div class="img"><img src="img/g/l1/2.png" alt=""></div>
-            <div class="img"><img src="img/g/l1/4.jpeg" alt=""></div>
-            <div class="img"><img src="img/g/l1/3.png" alt=""></div>
-            <div class="img"><img src="img/g/l1/5.jpeg" alt=""></div>
-            <div class="img"><img src="img/g/l1/6.png" alt=""></div>
-        </div>
-
-        <div class="row gallerytitle" id="l3l"><b>Speaker Chain</b></div>
-        <hr />
-        <div class="row gallery-sub-title">Circuitry designed with a voltage / current amplifying stage + a low pass RC
-            filter to play a clean audio signal </div>
-        <div class="gallery">
-            <div class="img">
-                <video controls>
-                    <source src="img/g/l3/3.mp4#t=0.01" type="video/mp4">
-                </video>
-            </div>
-            <div class="img"><img src="img/g/l3/1.png" alt=""></div>
-            <div class="img"><img src="img/g/l3/2.png" alt=""></div>
-        </div>
-
-        <div class="row gallerytitle" id="l4l"><b>MigosNet</b></div>
-        <hr />
-        <div class="row gallery-sub-title"> 
-            Leveraging Long Short-Term Memory DNNs to generate Migos lyrics (and find recurring paterns within them)
-        </div>
-            <br/>
-            <a href="https://sparthaje.github.io/MigosNet" target="_blank">Live Demo (click here to open in new window)</a>
-            <iframe style="border-radius: 15px;" src="https://sparthaje.github.io/MigosNet" title="LiveDemo" width="140%" height="500px;" loading="lazy"></iframe> 
-
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>  
     </div>
+    <div id="captions">
+        <div>
+            <div class="box-label" style="width: 73.92vh;">
+                Hi i'm Shreepa, scroll to see what I'm working on!
+            </div>
 
+            <div class="box-label">
+                Software Operations Lead @ UVA Solar Car
+            </div>
 
-    </div>
+            <div class="box-label">
+                Perception Engineer @ Cavalier Autonomous Racing
+            </div>
 
+            <div class="box-label">
+                Vertical Take-Off Landing Aircraft
+            </div>
+
+            <div class="box-label">
+                Speaker Chain
+            </div>
+
+            <div class="box-label">
+                Othello Artificial Intelligence
+            </div>
+        </div>
+     </div>
+
+     <div id="background-scroller"></div>
+     <div style="height: 5vh"></div>
+
+     <div id="more-info" style="height: 100vh; background-color: blue; z-index: 1; position: sticky;">
+
+     </div>
+    
 </body>
 
 </html>

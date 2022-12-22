@@ -35,17 +35,17 @@
 
             .container-fluid {
                 position: fixed;
+                top: 35vh;
             }
 
             #gallery {
                 padding-right: 5vw;
-                padding-top: 10vh;
             }
 
             canvas {
                 position: fixed;
-                top: 10vh;
-                left: 5vw;
+                top: 5vh;
+                right: 5vw;
             }
 
             .card {
@@ -55,10 +55,22 @@
 
                 height: 45vh;
                 width: 26vw;
-                background-color: black;
                 border-radius: 15px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px;
+                padding: 0;
+
                 /* bottom: 10%; */
                 display: inline-block;
+            }
+            
+            .card div {
+                height: 45vh;
+                width: 26vw;
+                border-radius: 15px;
+
+                background-image: linear-gradient(to bottom left, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
             }
 
             .card-controls {
@@ -68,9 +80,10 @@
 
                 display: inline-block;
                 width: 2vw;
-                background-color: red;
+                
                 line-height: 45vh;
                 height: 45vh;
+                z-index: 1000;
             }
 		</style>
 	</head>
@@ -80,13 +93,13 @@
 
         <div class="slideshow">
             <div class="card-controls">
-                L
+                &#8592;
             </div>
-            <div class="card">
-
+            <div class="card" style="background-image: url('img/g/l2/5.jpg');">           	
+                <div></div>
             </div>
-            <div class="card-controls" style="left: 33vw;" onclick="scrollTest();">
-                R
+            <div class="card-controls" style="left: 33vw;" onclick="scrollTest();">     	
+                &#8594;
             </div>
         </div>
         

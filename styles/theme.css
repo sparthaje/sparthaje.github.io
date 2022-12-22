@@ -1,6 +1,9 @@
+@font-face { font-family: Inter; src: url('../fonts/Inter/static/Inter-Regular.ttf'); } 
+@font-face { font-family: Inter-Bold; src: url('../fonts/Inter/static/Inter-Bold.ttf'); } 
 body {
     background-color: #fafafa;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
 }
 
 a {
@@ -20,4 +23,4 @@ a:hover {
 
 .a:hover {
     color:  #770000;
-  }
+}
