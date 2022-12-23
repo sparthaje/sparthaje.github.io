@@ -1,26 +1,32 @@
+:root {
+    --track-margin: 35%;
+    --image-height: 30vmin;
+    --image-gap: 4vmin;
+}
+
 .image-tracks > .image {
     width: 45vmin;
-    height: 30vmin;
+    height: var(--image-height);
     object-fit: cover;
     /* object-position: 100% center; */
 }
 
 .image-tracks {
     display: flex;
-    gap: 4vmin;
+    gap: var(--image-gap);
     position: absolute;
     user-select: none; /* -- Prevent image highlighting -- */
 }
 
 #image-track {
     left: -17%;
-    top: 30%;
+    top: var(--track-margin);
     transform: translate(0%, -50%); 
 }
 
 #image-track-2 {
     left: -15%;
-    top: 65%;
+    top: calc(var(--track-margin) + var(--image-height) + var(--image-gap));
     transform: translate(0%, -50%); 
 }
 
