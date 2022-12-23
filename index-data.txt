@@ -1,0 +1,14 @@
+{{TRACK 1}}
+<img class="image" src="{{1}}" draggable="false" style="width: {{0}};" />
+45vmin img/content/othello.jpg
+45vmin img/content/car.jpg
+45vmin img/content/solarcar.jpg
+45vmin img/content/othello.jpg
+END
+
+{{TRACK 2}}
+<img class="image" src="{{1}}" draggable="false" style="width: {{0}};" />
+55vmin img/content/speaker.jpg
+45vmin img/content/ascent.jpeg
+55vmin img/content/speaker.jpg
+END
