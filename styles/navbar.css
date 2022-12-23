@@ -4,12 +4,12 @@
     font-size: 1.5em;
     text-decoration: none;
     position: absolute;
-    left: 4%;
+    left: calc(4% + 12.5vmin);
     top: 3.5%;
 }
 
 #nav-links {
-    left: calc(4% - 7px);
+    left: calc(4% + 12.5vmin - 7px);
     top: 8.5%;
     position: absolute;
     text-align: center;
@@ -17,4 +17,13 @@
 }
 #nav-links > span {
     margin-left: 7px;
+}
+
+#profile {
+    height: 10vmin;
+    width: 10vmin;
+    position: absolute;
+    border-radius: 5px;
+    top: 4%;
+    left: 4%;
 }
