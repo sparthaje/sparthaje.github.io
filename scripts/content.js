@@ -1,5 +1,6 @@
 let track = null;
 let track2 = null;
+let bg = null;
 
 const LEFT_BLOCKS = [-88, -80];
 const SCALER = 0.9;
@@ -7,6 +8,7 @@ const SCALER = 0.9;
 window.onload = () => {
     track = document.getElementById("image-track");
     track2 = document.getElementById("image-track-2");
+    bg = document.getElementById("bg");
 }
 
 const handleOnDown = e => {
@@ -44,6 +46,10 @@ const handleOnMove = e => {
 
     track.animate({
         transform: `translate(${nextPercentage}%, -50%)`
+    }, { duration: 1200, fill: "forwards" });
+
+    bg.animate({
+        transform: `translate(${nextPercentage}%, 0%)`
     }, { duration: 1200, fill: "forwards" });
 
     track2.animate({

@@ -1,0 +1,19 @@
+/* https://codepen.io/sosuke/pen/Pjoqqp */
+
+#expansion {
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    width: 10%;
+    left: 45%;
+    font-size: 0.8em;
+    color: #555555;
+}
+
+#expansion-arrow {
+    position: absolute;
+    width: 8%;
+    left: calc(50% - 4%);
+    bottom: 7%;
+    filter: invert(33%) sepia(0%) saturate(1085%) hue-rotate(187deg) brightness(96%) contrast(92%);
+}

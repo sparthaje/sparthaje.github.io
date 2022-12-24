@@ -27,3 +27,9 @@ a:hover {
 .a:hover {
     color:  #770000;
 }
+
+#bg {
+    width: 1000vw;
+    height: 100vh;
+    background: linear-gradient(to right, #fcfcfc, #f8f8f8, #f0f0f0);
+}
