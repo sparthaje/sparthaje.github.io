@@ -21,6 +21,6 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    background-color: green;
+    background-color: #fafafa;
     transform: translate(0%, 100vh);
 }
