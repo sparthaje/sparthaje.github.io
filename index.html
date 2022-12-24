@@ -33,17 +33,13 @@
 
 <body>
     <script src="scripts/content.js"></script>
+    <script src="scripts/listview.js"></script>
+
     <div id="bg"></div>
 
     <div id="title">
         shreepa parthaje
     </div>
-
-    <div id="expansion">
-        List View
-    </div>
-
-    <img id="expansion-arrow" src="img/landing/arrow.svg"/>    
 
     <img id="profile" src="img/landing/profile.png"/>
 
@@ -69,12 +65,57 @@
     </div>
 
     <div id="image-track" class = "image-tracks" data-mouse-down-at="0" data-prev-percentage="0">
-        <div style="background-color: #cccccca9; height: 30vmin;" class="image" src="img/content/othello.jpg" draggable="false" style="width: 45vmin;"></div>
+        <div style="background-color: #cccccca9; height: 30vmin; width: 40vmin;" class="image" ></div>
 <img class="image" src="img/content/othello.jpg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/car.jpg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/solarcar.jpg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/car.jpg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/solarcar.jpg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/car.jpg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/solarcar.jpg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/othello.jpg" draggable="false" style="width: 45vmin;" />
     </div>
     <div id="image-track-2" class = "image-tracks" data-mouse-down-at="0" data-prev-percentage="0">
-        <div style="background-color: #bbbbbba9; height: 30vmin;" class="image" src="img/content/othello.jpg" draggable="false" style="width: 55vmin;"></div><img class="image" src="img/content/ascent.jpeg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/speaker.jpg" draggable="false" style="width: 55vmin;" /><img class="image" src="img/content/ascent.jpeg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/speaker.jpg" draggable="false" style="width: 55vmin;" /><img class="image" src="img/content/ascent.jpeg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/speaker.jpg" draggable="false" style="width: 55vmin;" />
+        <div style="background-color: #cccccca9; height: 30vmin; width: 43vmin;" class="image" ></div>
+<img class="image" src="img/content/speaker.jpg" draggable="false" style="width: 55vmin;" /><img class="image" src="img/content/ascent.jpeg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/speaker.jpg" draggable="false" style="width: 55vmin;" /><img class="image" src="img/content/ascent.jpeg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/speaker.jpg" draggable="false" style="width: 55vmin;" /><img class="image" src="img/content/ascent.jpeg" draggable="false" style="width: 45vmin;" /><img class="image" src="img/content/speaker.jpg" draggable="false" style="width: 55vmin;" />
     </div>
+
+    <div id="listview">
+        <table>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+            </tr>
+            <tr>
+              <td>Island Trading</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Laughing Bacchus Winecellars</td>
+              <td>Yoshi Tannamuri</td>
+              <td>Canada</td>
+            </tr>
+            <tr>
+              <td>Magazzini Alimentari Riuniti</td>
+              <td>Giovanni Rovelli</td>
+              <td>Italy</td>
+            </tr>
+          </table>
+    </div>
+
+    <div id="slide-button" onclick="slideup();"> 
+        &#60;&#60; expand list view &#62; &#62;
+    </div> 
     
 </body>
 
