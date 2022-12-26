@@ -18,6 +18,10 @@
     ;
 }
 
+.image:hover {
+    cursor: pointer;
+}
+
 .image-tracks {
     display: flex;
     gap: var(--image-gap);

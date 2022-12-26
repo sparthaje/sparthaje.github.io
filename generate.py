@@ -23,7 +23,7 @@ def load_data(data):
             raw = line
             continue
 
-        items = line.split(" ")
+        items = line.split(" ; ")
         temp = raw
         for j in range(len(items)):
             key = "{{j}}".replace("j", str(j))

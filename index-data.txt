@@ -1,22 +1,22 @@
 {{TRACK 1}}
-<img class="image" src="{{1}}" draggable="false" style="width: {{0}};" />
-45vmin img/content/othello.jpg
-45vmin img/content/car.jpg
-45vmin img/content/solarcar.jpg
-45vmin img/content/car.jpg
-45vmin img/content/solarcar.jpg
-45vmin img/content/car.jpg
-45vmin img/content/solarcar.jpg
-45vmin img/content/othello.jpg
+<img title="{{3}}" class="image" src="{{1}}" draggable="false" style="width: {{0}};" onclick="window.location = '{{2}}';"/>
+45vmin ; img/content/othello.jpg ; pages/othello/index.html ; Othello AI
+45vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
+45vmin ; img/content/solarcar.jpg ; # ; Solar Powered Car
+45vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
+45vmin ; img/content/solarcar.jpg ; # ; Solar Powered Car
+45vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
+45vmin ; img/content/solarcar.jpg ; # ; Solar Powered Car
+45vmin ; img/content/othello.jpg ; pages/othello/index.html ; Othello AI
 END
 
 {{TRACK 2}}
-<img class="image" src="{{1}}" draggable="false" style="width: {{0}};" />
-55vmin img/content/speaker.jpg
-45vmin img/content/ascent.jpeg
-55vmin img/content/speaker.jpg
-45vmin img/content/ascent.jpeg
-55vmin img/content/speaker.jpg
-45vmin img/content/ascent.jpeg
-55vmin img/content/speaker.jpg
+<img title="{{3}}" class="image" src="{{1}}" draggable="false" style="width: {{0}};" onclick="window.location = '{{2}}';"/>
+55vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
+45vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
+55vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
+45vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
+55vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
+45vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
+55vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
 END

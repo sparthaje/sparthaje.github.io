@@ -30,16 +30,19 @@ const handleOnMove = e => {
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
         maxDelta = window.innerWidth / 2;
 
-    const percentage = (mouseDelta / maxDelta) * -100,
+    let percentage = (mouseDelta / maxDelta) * -100,
         nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
         nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), LEFT_BLOCKS[0]);
 
     const mouseDelta2 = parseFloat(track.dataset.mouseDownAt) - e.clientX,
         maxDelta2 = window.innerWidth / 2;
   
-    const percentage2 = (mouseDelta2 / maxDelta2) * -100 * SCALER,
+    let percentage2 = (mouseDelta2 / maxDelta2) * -100 * SCALER,
         nextPercentageUnconstrained2 = parseFloat(track2.dataset.prevPercentage) + percentage2,
         nextPercentage2 = Math.max(Math.min(nextPercentageUnconstrained2, 0), LEFT_BLOCKS[1]);
+
+    if (isNaN(nextPercentage)) nextPercentage = 0;
+    if (isNaN(nextPercentage2)) nextPercentage2 = 0;
 
     track.dataset.percentage = nextPercentage;
     track2.dataset.percentage = nextPercentage2;
@@ -56,11 +59,7 @@ const handleOnMove = e => {
         transform: `translate(${nextPercentage2}%, -50%)`
     }, { duration: 1200, fill: "forwards" });
 
-    //   for(const image of track.getElementsByClassName("image")) {
-    //     image.animate({
-    //       objectPosition: `${100 + nextPercentage}% center`
-    //     }, { duration: 1200, fill: "forwards" });
-    //   }
+  
 }
 
 /* -- Had to add extra lines for touch events -- */

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Audio Processing Circuitry for Speaker</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <style>
+   
+</style>
+<link rel="stylesheet" href="../../styles/md.css">
+<div id="title">shreepa parthaje</div>
+<a id="return" href="../../index.html">&#8592; return home</a>
+<img id="profile" src="file:////home/shreepa/Documents/sparthaje.github.io/img/landing/profile.png"/>
+<h1 id="audio-processing-circuitry-for-speaker">Audio Processing Circuitry for Speaker</h1>
+<div class="container">
+<div style="width: 30%; padding-right: 15px;">
+<p><img src="file:////home/shreepa/Documents/sparthaje.github.io/img/content/speaker.jpg" alt=""></p>
+<video controls="" style="width: 100%;">
+    <source src="../../img/g/speaker/3.mp4" type="video/mp4">
+</video>
+</div>
+<div style="width: 70%; padding-left: 25px;">
+<h2 id="design-overview">Design overview</h2>
+<p>The aux port emits analog signals when playing music, and circuitry needs to be built to take this weak signal and use it to drive a large speaker. My goal with this project was to make the speaker on the left perform at high volumes without noticeable noise.</p>
+<p>The circuit:</p>
+<ul>
+<li>First stage combines left and right channel voltage signals</li>
+<li>Op-amp stage amplifies the voltage from <code>mV</code> range to the <code>V</code> range</li>
+<li>Low-pass RC filter filters out noise added in the amplification process</li>
+<li>Push-pull stage pushes more current into the speakers to drive the large discs</li>
+</ul>
+<h2 id="designing-the-low-pass-rc-filter">Designing the low-pass RC filter</h2>
+<p>The op-amp stage I used to amplify the signal had issues of adding a lot of high frequency noise to the circuit. While a variety of solutions exist, for my first analog circuit I went with a simple RC low-pass filter. Analyzing the signal after amplification in the frequency domain showed the noisy frequencies. Taking into account the frequency range I wanted to filter out along with a 10 <code>kΩ</code> resistor, I could solve for what capacitor I needed.</p>
+</div>
+</div>
+
+        
+        
+    </body>
+    </html>
