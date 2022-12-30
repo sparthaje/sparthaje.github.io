@@ -17,10 +17,18 @@
 
 #listview {
     width: 100vw;
-    height: 83vh;
+    height: 100vh;
+
     position: absolute;
     top: 0%;
     left: 0%;
-    background-color: #fafafa;
-    transform: translate(0%, 100vh);
+    transform: translate(100vw, 0%);
+
+    background-color: #770000;
+    color: white;
+
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-left: 10%;
+    padding-right: 20%;
 }
