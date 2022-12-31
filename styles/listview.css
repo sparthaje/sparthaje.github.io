@@ -15,28 +15,65 @@
     transform: translate(40vw, 90vh);
 }
 
-#listview {
-    width: 100vw;
-    height: 100vh;
-
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    transform: translate(100vw, 0%);
-
-    color: white;
-
-    padding-top: 20%;
-    padding-bottom: 20%;
-    padding-left: 10%;
-    padding-right: 20%;
-}
-
 .list-fill-animation {
     width: 100vw;
     height: 100vh;
-    background-color: #770000;
+    background-color: white;
     position: absolute;
     top: 0%;
     left: 0%;
+}
+
+.list {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 21vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+}
+
+.list > ul {
+    list-style-type: none; /* Remove bullets */
+}
+
+.li-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.li-title > a:hover {
+    color: #cc0000;
+}
+
+.li-title > a {
+    cursor: auto;
+}
+
+.li-header {
+    margin-bottom: 8px;
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+.li-header > a:hover {
+    color: #cc0000;
+}
+
+.li-header > a {
+    cursor: auto;
+}
+
+.li-item {
+    padding-left: 5px;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.li-item > a {
+    color: black;
+}
+
+.li-item > a:hover {
+    color: #770000;
 }

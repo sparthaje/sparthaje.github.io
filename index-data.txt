@@ -1,10 +1,5 @@
 {{TRACK 1}}
 <img title="{{3}}" class="image" src="{{1}}" draggable="false" style="width: {{0}};" onclick="window.location = '{{2}}';"/>
-45vmin ; img/content/othello.jpg ; pages/othello/index.html ; Othello AI
-45vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
-45vmin ; img/content/solarcar.jpg ; # ; Solar Powered Car
-45vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
-45vmin ; img/content/solarcar.jpg ; # ; Solar Powered Car
 45vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
 45vmin ; img/content/solarcar.jpg ; # ; Solar Powered Car
 45vmin ; img/content/othello.jpg ; pages/othello/index.html ; Othello AI
@@ -12,12 +7,50 @@ END
 
 {{TRACK 2}}
 <img title="{{3}}" class="image" src="{{1}}" draggable="false" style="width: {{0}};" onclick="window.location = '{{2}}';"/>
+45vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
 45vmin ; img/content/MigosNet.png ; https://sparthaje.github.io/MigosNet ; ML writes Lyrics
-45vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
+40vmin ; img/content/chlorophyll.png ; # ; Smart Home System
 55vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
-55vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
-45vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
-55vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
-45vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
-55vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
+END
+
+{{LIST 1}}
+<li class="{{1}}"><a {{2}}>{{0}}</a></li>
+Currently ; li-title ;
+Research / Teams ; li-header ;  
+🏎️ Cavalier Autonomous Racing ; li-item ;  
+☀️ UVA Solar Car Team ; li-item ;  
+Work ; li-header ;  
+• CS @ University of Virginia ; li-item ;  
+END
+
+{{LIST 2}}
+<li class="{{1}}"><a {{2}}>{{0}}</a></li>
+My Favorite Projects ; li-title ;  
+
+Robotics / Electronics ; li-header ;  
+🏋️ Barbell Path Analysis ; li-item ;  
+🚀 Ascent - VTOL Aircraft ; li-item ; href="pages/ascent/index.html"
+🍃 Chlorophyll Smart Home ; li-item ;  
+🎵 Power Speaker Circuitry ; li-item ; href="pages/speaker/index.html"
+
+Software ; li-header ;  
+🎼 MigosNet - Lyric Generation ; li-item ; href="https://sparthaje.github.io/MigosNet"
+🎲 Othello AI ; li-item ;  href="pages/othello/index.html"
+📦 Opener ; li-item ; href="https://github.com/sparthaje/Opener"
+END
+
+{{LIST 3}}
+<li class="{{1}}"><a {{2}}>{{0}}</a></li>
+Previously ; li-title ;
+Research / Teams ; li-header ; 
+🛰️ TJ REVERB ; li-item ; href="https://activities.tjhsst.edu/cubesat/tjreverb.html"
+Work ; li-header ; 
+• Intern @ AWS ; li-item ; href="https://aws.amazon.com/"
+• Intern @ Capitol Canary ; li-item ; href="https://capitolcanary.com/"
+END
+
+{{LIST 4}}
+<li class="{{1}}"><a {{2}}>{{0}}</a></li>
+Other ; li-title ;
+• Other Projects ; li-item ; #
 END
