@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles/content.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/listview.css">
+    <link rel="stylesheet" href="styles/mobile.css">
 
     <title>Shreepa Parthaje</title>
 
@@ -26,8 +27,8 @@
     <script src="scripts/content.js"></script>
     <script src="scripts/listview.js"></script>
 
+    <div id="desktop">
     <div id="bg"></div>
-
     <div id="image-track-container">
       <div id="image-track" class = "image-tracks" data-mouse-down-at="0" data-prev-percentage="0">
           <div style="background-color: #cccccca9; height: 30vmin; width: 40vmin; box-shadow: initial;" class="image" ></div>
@@ -69,6 +70,10 @@
       </ul> 
     </div>
 
+    <div id="slide-button" onclick="slideup();"> 
+      := list view
+    </div>
+    </div>
     <div id="nav-section">
       <div id="title">
           shreepa parthaje
@@ -98,10 +103,25 @@
       </div>
     </div>
 
-    <div id="slide-button" onclick="slideup();"> 
-      := list view
+    <div id="mobile">
+      <br/><br/>
+      <div class="mobile-list">
+        <ul>
+<li class="li-title ;"><a {{2}}>Currently</a></li><li class="li-header"><a  >Research / Teams</a></li><li class="li-item"><a  >🏎️ Cavalier Autonomous Racing</a></li><li class="li-item"><a  >☀️ UVA Solar Car Team</a></li><li class="li-header"><a  >Work</a></li><li class="li-item"><a  >• CS @ University of Virginia</a></li>
+        </ul> 
+<ul>
+<li class="li-title"><a  >My Favorite Projects</a></li><li class="li-header"><a  >Robotics / Electronics</a></li><li class="li-item"><a  >🏋️ Barbell Path Analysis</a></li><li class="li-item"><a href="pages/ascent/index.html">🚀 Ascent - VTOL Aircraft</a></li><li class="li-item"><a  >🍃 Chlorophyll Smart Home</a></li><li class="li-item"><a href="pages/speaker/index.html">🎵 Power Speaker Circuitry</a></li><li class="li-header"><a  >Software</a></li><li class="li-item"><a href="https://sparthaje.github.io/MigosNet">🎼 MigosNet - Lyric Generation</a></li><li class="li-item"><a  href="pages/othello/index.html">🎲 Othello AI</a></li><li class="li-item"><a href="https://github.com/sparthaje/Opener">📦 Opener</a></li>
+</ul> 
+<ul>
+<li class="li-title ;"><a {{2}}>Previously</a></li><li class="li-header"><a >Research / Teams</a></li><li class="li-item"><a href="https://activities.tjhsst.edu/cubesat/tjreverb.html">🛰️ TJ REVERB</a></li><li class="li-header"><a >Work</a></li><li class="li-item"><a href="https://aws.amazon.com/">• Intern @ AWS</a></li><li class="li-item"><a href="https://capitolcanary.com/">• Intern @ Capitol Canary</a></li>
+</ul> 
+<ul>
+<li class="li-title ;"><a {{2}}>Other</a></li><li class="li-item"><a #>• Other Projects</a></li>
+</ul> 
+      </div>
+      <br/><br/>
     </div>
-    
+
 </body>
 
 </html>

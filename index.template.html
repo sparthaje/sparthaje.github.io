@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles/content.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/listview.css">
+    <link rel="stylesheet" href="styles/mobile.css">
 
     <title>Shreepa Parthaje</title>
 
@@ -26,8 +27,8 @@
     <script src="scripts/content.js"></script>
     <script src="scripts/listview.js"></script>
 
+    <div id="desktop">
     <div id="bg"></div>
-
     <div id="image-track-container">
       <div id="image-track" class = "image-tracks" data-mouse-down-at="0" data-prev-percentage="0">
           <div style="background-color: #cccccca9; height: 30vmin; width: 40vmin; box-shadow: initial;" class="image" ></div>
@@ -69,6 +70,10 @@
       </ul> 
     </div>
 
+    <div id="slide-button" onclick="slideup();"> 
+      := list view
+    </div>
+    </div>
     <div id="nav-section">
       <div id="title">
           shreepa parthaje
@@ -98,10 +103,25 @@
       </div>
     </div>
 
-    <div id="slide-button" onclick="slideup();"> 
-      := list view
+    <div id="mobile">
+      <br/><br/>
+      <div class="mobile-list">
+        <ul>
+{{LIST 1}}
+        </ul> 
+<ul>
+{{LIST 2}}
+</ul> 
+<ul>
+{{LIST 3}}
+</ul> 
+<ul>
+{{LIST 4}}
+</ul> 
+      </div>
+      <br/>
     </div>
-    
+
 </body>
 
 </html>
