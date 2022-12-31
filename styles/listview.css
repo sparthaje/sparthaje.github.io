@@ -57,7 +57,7 @@
 .li-title {
     font-weight: 700;
     margin-bottom: 5px;
-    font-size: 28px;
+    font-size: 3.3vh;
 }
 
 .li-title > a:hover {
@@ -71,7 +71,7 @@
 .li-header {
     margin-bottom: 8px;
     margin-top: 15px;
-    font-size: 28px;
+    font-size: 3vh;
 }
 
 .li-header > a:hover {
@@ -84,7 +84,7 @@
 
 .li-item {
     padding-left: 5px;
-    font-size: 24px;
+    font-size: 2vh;
     margin-bottom: 5px;
 }
 
