@@ -36,5 +36,5 @@ const slideup = () => {
         }, { duration: 400, fill: "forwards" });
     });
       
-    document.getElementById("slide-button").innerText = "X show gallery view"
+    document.getElementById("slide-button").innerText = "⛶ gallery view"
 }

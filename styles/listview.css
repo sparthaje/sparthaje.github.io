@@ -5,14 +5,31 @@
     top: 0;
     left: 0;
     font-size: 0.8em;
-    color: #555555;
     
-    width: 20vw;
+    color: #555555;
+    background-color: rgb(243, 241, 241);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    
+    width: 10vw;
     height: 3vh;
 
     text-align: center;
 
-    transform: translate(40vw, 90vh);
+    transform: translate(45vw, 90vh);
+
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+#slide-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .list-fill-animation {

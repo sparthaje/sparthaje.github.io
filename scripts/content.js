@@ -9,6 +9,14 @@ window.onload = () => {
     track = document.getElementById("image-track");
     track2 = document.getElementById("image-track-2");
     bg = document.getElementById("bg");
+    
+    track.animate({
+        transform: `translate(0%, -50%)`
+    }, { duration: 300, fill: "forwards" });
+    track2.animate({
+        transform: `translate(0%, -50%)`
+    }, { duration: 300, fill: "forwards" });
+
 }
 
 const handleOnDown = e => {
