@@ -26,6 +26,7 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    cursor: pointer;
 }
 
 #slide-button:hover {
