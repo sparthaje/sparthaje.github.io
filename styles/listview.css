@@ -24,11 +24,19 @@
     left: 0%;
     transform: translate(100vw, 0%);
 
-    background-color: #770000;
     color: white;
 
     padding-top: 20%;
     padding-bottom: 20%;
     padding-left: 10%;
     padding-right: 20%;
+}
+
+.list-fill-animation {
+    width: 100vw;
+    height: 100vh;
+    background-color: #770000;
+    position: absolute;
+    top: 0%;
+    left: 0%;
 }
