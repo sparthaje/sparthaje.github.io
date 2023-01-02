@@ -28,6 +28,10 @@ a {
     color:  #cc0000;
 }
 
+.github-markdown-body a {
+    color:  #cc0000;
+}
+
 #title {
     color:  #cc0000;
     font-weight: bold;

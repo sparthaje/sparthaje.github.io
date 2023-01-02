@@ -3,6 +3,8 @@
 45vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
 45vmin ; img/content/solarcar.jpg ; # ; Solar Powered Car
 45vmin ; img/content/othello.jpg ; pages/othello/index.html ; Othello AI
+35vmin ; img/content/reverb.png ; https://activities.tjhsst.edu/cubesat/tjreverb.html ; TJ REVERB Satellite
+55vmin ; img/content/other.png ; # ; Check out my other projects!
 END
 
 {{TRACK 2}}
@@ -10,7 +12,7 @@ END
 45vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
 45vmin ; img/content/MigosNet.png ; https://sparthaje.github.io/MigosNet ; ML writes Lyrics
 40vmin ; img/content/chlorophyll.png ; # ; Smart Home System
-55vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
+44vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
 END
 
 {{LIST 1}}
@@ -19,8 +21,8 @@ Currently ; li-title ;
 Research / Teams ; li-header ;  
 🏎️ Cavalier Autonomous Racing ; li-item ;  
 ☀️ UVA Solar Car Team ; li-item ;  
-Work ; li-header ;  
-• CS @ University of Virginia ; li-item ;  
+Work & School ; li-header ;  
+📚 CS @ University of Virginia ; li-item ;  
 END
 
 {{LIST 2}}
@@ -44,9 +46,10 @@ END
 Previously ; li-title ;
 Research / Teams ; li-header ; 
 🛰️ TJ REVERB ; li-item ; href="https://activities.tjhsst.edu/cubesat/tjreverb.html"
-Work ; li-header ; 
-• Intern @ AWS ; li-item ; href="https://aws.amazon.com/"
-• Intern @ Capitol Canary ; li-item ; href="https://capitolcanary.com/"
+Work & School ; li-header ; 
+☁️ Intern @ AWS ; li-item ; href="https://aws.amazon.com/"
+🎒 Thomas Jefferson HS for Science and Technology ; li-item ; 
+🪧 Intern @ Capitol Canary ; li-item ; href="https://capitolcanary.com/"
 END
 
 {{LIST 4}}
