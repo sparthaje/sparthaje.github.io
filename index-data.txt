@@ -11,7 +11,7 @@ END
 <img title="{{3}}" class="image" src="{{1}}" draggable="false" style="width: {{0}};" onclick="window.location = '{{2}}';"/>
 45vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
 45vmin ; img/content/MigosNet.png ; https://sparthaje.github.io/MigosNet ; ML writes Lyrics
-40vmin ; img/content/chlorophyll.png ; # ; Smart Home System
+40vmin ; img/content/chlorophyll.png ; pages/chlorophyll/index.html ; Smart Home System
 44vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
 END
 
@@ -32,7 +32,7 @@ My Favorite Projects ; li-title ;
 Robotics / Electronics ; li-header ;  
 🏋️ Barbell Path Analysis ; li-item ;  
 🚀 Ascent - VTOL Aircraft ; li-item ; href="pages/ascent/index.html"
-🍃 Chlorophyll Smart Home ; li-item ;  
+🍃 Chlorophyll Smart Home ; li-item ;  href="pages/chlorophyll/index.html"
 🎵 Power Speaker Circuitry ; li-item ; href="pages/speaker/index.html"
 
 Software ; li-header ;  

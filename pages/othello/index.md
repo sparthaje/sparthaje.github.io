@@ -2,7 +2,6 @@
 <div id="title">shreepa parthaje</div>
 <a id="return" href="../../index.html">&#8592; return home</a>
 <img id="profile" src="../../img/landing/profile.png"/>
-
 <br/><br/><br/><br/>
 
 # Othello AI
