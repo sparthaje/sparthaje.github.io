@@ -38,6 +38,4 @@ When using a standard minimax tree with alpha beta pruning there are multiple ga
 
 # Bitboard algorithm walk through
 
-<script src="https://gist.github.com/sparthaje/f158a791c951591121f3982401ee3951.js"></script>
-
-[Jupyter Notebook Source](https://sparthaje.github.io/othello.ipynb)
+<script src="https://gist.github.com/sparthaje/0705000cc29cd704e9a13577d5491304.js"></script>

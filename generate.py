@@ -5,7 +5,7 @@ def load_data(data):
     html = ""
     raw = ""
     for line in data:
-        if line == "":
+        if line == "" or line[0] == "#":
             continue
 
         if tag == "n/a":

@@ -1322,81 +1322,131 @@ body,
 <div id="title">shreepa parthaje</div>
 <a id="return" href="../../index.html">&#8592; return home</a>
 <img id="profile" src="../../img/landing/profile.png"/>
+<script>
+const jumpto = (element) => {
+  document.getElementById(element.dataset.jumpto).scrollIntoView();
+}
+</script>
+<br/><br/><br/><br/>
 <h1 id="ascent---a-vertical-takeoff-landing-aircraft">Ascent - A Vertical-Takeoff Landing Aircraft</h1>
-<h2 id="what-is-it">What is it?</h2>
+<div id="nav">
+Jump to: 
+<span data-jumpto="hw" onclick="jumpto(this)">Hardware</span> •
+<span data-jumpto="pid" onclick="jumpto(this)">Control Systems</span> •
+<span data-jumpto="kf" onclick="jumpto(this)">Kalman Filter</span> •
+<span data-jumpto="fsw" onclick="jumpto(this)">Flight Software</span> •
+<span data-jumpto="gallery" onclick="jumpto(this)">Gallery</span>
+</div>
+<h2 id="what-is-ascent">What is Ascent?</h2>
+<p>Ascent is an aircraft me and two friends designed to stabilize and land itself using only a set of two counter rotating propellers. Our goal was to achieve this using cheap electronics and hardware delivering the whole product for under ~$100. It was largely inspired by the work done with BPS Space's <a href="https://www.youtube.com/watch?v=5kuLr_fbaNs">Sprite Aircraft</a>.</p>
+<ul>
+<li>Project goals:
+<ol>
+<li>Fly without oscillating</li>
+<li>Hover at 5m</li>
+<li>Land without tipping over</li>
+</ol>
+</li>
+</ul>
+<h2 id="hw">Hardware and Electronics</h2>
+<h3 id="hardware">Hardware</h3>
+<p>The two main hardware components we designed were the frame and a gimballed nozzle. The frame had to be light weight and durable, while able to easily carry all the electronics. The gimballed nozzle is crucial for redirecting thrust for thrust vector control.</p>
+<p><img src="../../img/g/ascent/craft.png" alt=""> &lt;-- Full assembly of the craft.</p>
+<p><img src="../../img/g/ascent/gimbal.png" alt=""></p>
+<p>Servos turn the nozzle to redirect thrust to control aircraft's yaw and pitch.</p>
+<h3 id="electronics">Electronics</h3>
+<p>The flight computer was made with:</p>
+<ul>
+<li>Teensy 3.6</li>
+<li>BNO055 Inertial Measurement Unit</li>
+<li>BMP388 Altimeter</li>
+<li>SD Card SPI Reader/Writer</li>
+<li>XBee Radio</li>
+</ul>
+<h2 id="pid">Control Systems</h2>
+<p>The control system's were critical to both stabilize Ascent and control its vertical position. To keep it simple, we decided to use PID loops to control the forces applied on the Ascent craft (treating it like a point mass). When integrating the controller into the flight software, we planned to model the craft with empirical data to take force outputs from the PID loops and convert them into actuation of the servos and ESC.</p>
+<video controls style="width: 60%; margin-left: 20%;">
+    <source src="../../img/g/ascent/controls.m4v#t=0.1" type="video/mp4">
+    <br/>
+</video>
+<p>There are 3 degrees of freedom (DOF) that the control systems don't account for: <code>x</code>, <code>y</code>, and <code>roll</code>. The system allows for translations in position, and the counter-rotating propellers are designed to passively mitigate roll.</p>
+<p>All of our simulations were done in MATLAB's Simulink. Our Simulink model consisted of four parts:</p>
+<ol>
+<li>The PID loops</li>
+<li>The environmental factors</li>
+<li>The combination block - adds the forces from the PID and environment block, while taking into account the craft's size to calculate moments</li>
+<li>6DOF plant - Takes forces in the body frame of reference and applies them to the point mass in the environmental frame of references.</li>
+</ol>
+<p><img src="../../img/g/ascent/simulink.png" alt=""></p>
+<h3 id="the-pid-loops">The PID Loops</h3>
+<p><img src="../../img/g/ascent/pid.png" alt=""></p>
+<p>The goal of the three PID loops is to output a force in each direction based on <code>E_ψ</code>, <code>E_θ</code> and <code>E_z</code> (error in yaw, pitch, and height based on the setpoint). The yaw and pitch setpoints are set to zero as we want the craft to remain upright during ascent and decent. The height controller gets a variable setpoint corresponding to the craft's desired position during the hop.</p>
+<p><img src="../../img/g/ascent/z_setpoint.png" alt=""></p>
+<p><code>S(F)</code> or <code>Signal(force)</code> is a formula created from  experimental data which maps a desired thrust to the digital signal provided to the ESC connected to the brushless motor</p>
+<p>Using the <code>F_x</code>, <code>F_y</code>, and <code>F_z</code> PID outputs and plugging in the magnitude into <code>S(F)</code>, we figure out what actuation value to provide to the ESC. Inverse trig functions can be used to find the angles to actuate the servos to.</p>
+<p><img src="../../img/g/ascent/thrust.png" alt=""></p>
+<h3 id="the-environment-block">The Environment Block</h3>
+<p><img src="../../img/g/ascent/environment-block.png" alt="">
+In the environmental block we can push in external forces from wind and gravity primarily to see how to craft behaves in different conditions.</p>
+<h3 id="results">Results</h3>
+<div class="container">
+<div style="width: 50%">
+<p><img src="../../img/g/ascent/position.png" alt="">
+Position vs Time</p>
+</div>
+<div style="width: 50%">
+<p><img src="../../img/g/ascent/orientation.png" alt="">
+Orientation vs Time</p>
+</div>
+</div>
+<p>In the position graph, the translational drift is apparent (yellow and blue lines); however, it is pretty clear the control systems are able to match the setpoint function for vertical position. It is important to note landing collision dynamics were not modelled, so t &gt; ~8s needs to be ignored in both graphs.</p>
+<p>In the orientation graph, we see the control systems is nearly perfect with the orientation change in both pitch and yaw is less than 0.0025º or (1.389e-5)π rad. It is important to note in this graph to ignore the red (or roll) line as the dynamics for roll were not modelled.</p>
+<h2 id="kf">Navigation with Kalman Filter</h2>
+<p>One aspect of this project which was completely new to me was the idea that sensors cannot be trusted with the exact values they report, especially with the drift from the IMU. With our navigation software we wanted to fuse data from the barometer and IMU to get a good estimation of our position. Experimentally, we found the orientation to be passable through the values the BNO055 reported.</p>
+<h3 id="simulation">Simulation</h3>
+<script src="https://gist.github.com/sparthaje/744f6d1e5fc8e19dce1ce6c22c9e39f4.js"></script>
+<h3 id="validation">Validation</h3>
+<p><img src="../../img/g/ascent/electronics.jpeg" alt=""></p>
+<p>This board setup was tied to a pully in order to validate the Kalman filter. The platform was raised and lowered at varying speeds with a ruler in the video frame. The video data was then compared to recorded data on the SD card.</p>
+<h2 id="fsw">Flight Software</h2>
+<p><img src="../../img/g/ascent/software.png" alt=""></p>
+<p>The flight software was written in C++ and built using PlatformIO. The software is split into read, control, and actuate tasks which run in a single threaded loop. The read tasks update data into the state field registry, the control tasks make decisions for the actuation tasks, and the actuation tasks use the hardware to actuate the vehicle (also to send / store data). The tasks communicate through the StateField registry which is a global store of information that gets updated with every loop of the main control loop.</p>
+<h2 id="gallery">Gallery</h2>
 <style>
-.container {
-  display: flex;
-}
-
-.column {
-  width: 50%;
-  padding: 5px;
-}
-
-.column-fourth {
-  width: 25%;
-  padding: 5px;
-}
-
-.column-fourth > img {
-    font-size: 30px;
-    object-fit: cover;
-}
+  .caption {
+    font-size: 14px;
+  }
 </style>
-
 <div class="container">
-  <div class="column">
-    Ascent is an aircraft me and two friends designed to stabilize and land itself using only a set of two counter rotating propellers. Our goal was to achieve this using cheap electronics and hardware delivering the whole product for under ~$100. It was largely inspired by the work done with BPS Space's <a href='https://www.youtube.com/watch?v=5kuLr_fbaNs' target="_blank">Sprite aircraft</a>
-    <br/><br/>
-    <u>Our project goals:</u>
-    <li>Fly without oscillations</li>
-    <li>Hover at 5m</li>
-    <li>Land without tipping over</li>
-  </div>
-  <div class="column">
-    <img src="https://www.testim.io/wp-content/uploads/2019/11/Testim-What-is-a-Test-Environment_-A-Guide-to-Managing-Your-Testing-A.png" alt="Alt text for the image" style="height: 35vh;">
-  </div>
+<div style="width: 50%">
+<img src="../../img/g/ascent/gallery-1.png"/>
+<p><span class="caption">First iteration of the gimbal (never went into production)</span></p>
 </div>
-<h2 id="hardware">Hardware</h2>
-<div class="container" style="font-size: 14px;">
-  <div class="column-fourth">
-    <img src="https://www.testim.io/wp-content/uploads/2019/11/Testim-What-is-a-Test-Environment_-A-Guide-to-Managing-Your-Testing-A.png" alt="Alt text for the image" style="height: 35vh;">
-    Frame: Made out of light weight cheap carbon-fiber rods
-  </div>
-  <div class="column-fourth">
-    <img src="https://www.testim.io/wp-content/uploads/2019/11/Testim-What-is-a-Test-Environment_-A-Guide-to-Managing-Your-Testing-A.png" alt="Alt text for the image" style="height: 35vh;">
-    Gimballed nozzle: Controls thrust direction
-  </div>
-  <div class="column-fourth">
-    <img src="../../img/g/ascent/electronics.jpeg" alt="Alt text for the image" style="height: 35vh;">
-    Flight Computer: Inertial Measurement Unit, Altimeter, Teensy 3.6 Microcontroller, and SD card reader
-  </div>
-  <div class="column-fourth">
-    <img src="../../img/content/ascent.jpeg" alt="Alt text for the image" style="height: 35vh;">
-    Counter-rotating propellers: Creates 2kg of thrust + helps controll roll
-  </div>
+<div style="width: 50%">
+<img src="../../img/g/ascent/gallery-2.png"/>
+<p><span class="caption">Second iteration of the gimbal (tough process to assemble)</span></p>
+</div>
 </div>
 <div class="container">
-    <div class="column" style="width: 20%; font-size: 14px;">
-        <video controls="" style="height: 30vh;">
-            <source src="../../img/g/ascent/1.mp4#t=0.01" type="video/mp4">
-        </video>
-        <br/>
-        Testing the gimbal response speed
-    </div>
-    <div class="column" style="width: 80%">
-    Test
-    </div>
+<div style="width: 50%">
+<img src="../../img/g/ascent/gallery-3.png"/>
+<p><span class="caption">First iteration of the thrust test stand (failed because some of the force transferred into bending the plastic)</span></p>
 </div>
-<!-- <pre>
-<code>
-def method():
-    return 4
-</code>
-</pre> -->
-<p><code>hello</code></p>
-<h2 id="software--controls">Software + Controls</h2>
+<div style="width: 50%">
+<img src="../../img/g/ascent/gallery-4.png"/>
+<p><span class="caption">Second iteration of the thrust test stand (made structural improvements to help with bending still had the same fundamental issue)</span></p>
+</div>
+</div>
+<div class="container">
+<div style="width: 50%">
+<img src="../../img/g/ascent/gallery-5.png"/>
+<p><span class="caption">First iteration of the thrust test stand from another angle</span></p>
+</div>
+<div style="width: 50%">
+<img src="../../img/g/ascent/gallery-6.jpeg"/>
+<p><span class="caption">Final iteration of the thrust test stand</span></p>
+</div>
+</div>
 </div>
         </div>
         <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>

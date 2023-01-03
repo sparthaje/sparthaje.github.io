@@ -1321,7 +1321,7 @@ body,
 <div id="title">shreepa parthaje</div>
 <a id="return" href="../../index.html">&#8592; return home</a>
 <img id="profile" src="../../img/landing/profile.png"/>
-<p><br/><br/><br/><br/></p>
+<br/><br/><br/><br/>
 <h1 id="othello-ai">Othello AI</h1>
 <p><a href="https://en.wikipedia.org/wiki/Reversi">Othello</a> (also called Reversi) is a simple board game where there are two players white (<code>x</code>) and black (<code>o</code>). The goal of the game is to maximize the number of pieces you have on the board. The moves are similar to captures in checkers, but instead of removing the piece you jump over the piece gets flipped to your color. There is also no limits to how many pieces can be jumped over.</p>
 <p>Designing an AI for this game is an interesting problem because the captures create interesting edge cases on which pieces get flipped. This can make finding moves and playing moves with string operations costly.</p>
@@ -1340,8 +1340,7 @@ body,
 <p>I wrote algorithms to find moves and play moves using a string representation of the game state and a bitboard representation of the game state to generate the two box plots above. It is clear even when excluding outliers the median 15 turn game is more time intensive when using a string representation. When accounting for certain game paths as outliers, the string representation is ridiculously slow, taking <code>~10 ms</code> extra on my computer's CPU.</p>
 <p>When using a standard minimax tree with alpha beta pruning there are multiple game paths which need to be explored in order to make a decent decision. At a certain depth, exploration is cut off to use a heuristic to determine if the game state is &quot;winning.&quot; Because bitboards creates massive speed improvements, it allows minimax to explore deeper in the same amount of time thereby improving the quality in decisions making.</p>
 <h1 id="bitboard-algorithm-walk-through">Bitboard algorithm walk through</h1>
-<script src="https://gist.github.com/sparthaje/f158a791c951591121f3982401ee3951.js"></script>
-<p><a href="https://sparthaje.github.io/othello.ipynb">Jupyter Notebook Source</a></p>
+<script src="https://gist.github.com/sparthaje/0705000cc29cd704e9a13577d5491304.js"></script>
 </div>
         </div>
         

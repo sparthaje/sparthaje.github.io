@@ -1325,7 +1325,7 @@ body,
 <h1 id="chlorophyll-smart-home">Chlorophyll Smart Home</h1>
 <p>Chlorophyll was an expandable system I developed, so I could convert standard electrical switches in my home into &quot;smart&quot; units.</p>
 <h2 id="demo">Demo</h2>
-<video controls="" style="height: 30vh;">
+<video controls="" style="width: 60%; margin-left: 20%;">
     <source src="../../img/g/chlorophyll/demo.m4v" type="video/mp4">
 </video>
 <h2 id="software-components">Software Components</h2>
@@ -1340,7 +1340,7 @@ body,
 </li>
 </ul>
 <h2 id="hardware">Hardware</h2>
-<p>The circuitry for the project was relatively simple. I removed the switch from the wall and put a relay in between where the switch was. The wires entered the normally open pin and exited on the common pin, so when the signal voltage was <code>HIGH</code> the circuit would close.</p>
+<p>The circuitry for the project was relatively simple. I removed the switch from the wall and put a relay in between where the switch was. The wires enter the normally open pin and exit on the common pin, so when the signal voltage is <code>HIGH</code> the circuit closes, providing power to the light/fan.</p>
 <h2 id="expandability">Expandability</h2>
 <p>The hardware was relatively cheap compared to smart home alternatives on the market, as it could work with the Raspberry Pi Zero W and extremely cheap relay switches. This allowed me to design the project with expandability in mind. Each Rpi + relay(s) unit is named: <code>chlorophyll-node-n</code> where n represents the node's number. Each node runs the same <code>chloroplast</code> software, and based on the Firebase notifications it handles updating the relevant GPIO pin. The website was also designed to expand easily where each node has a section in gray with relevant switches.</p>
 <h2 id="gallery">Gallery</h2>
@@ -1348,8 +1348,6 @@ body,
 <div style="width: 50%">
 <p><img src="../../img/g/chlorophyll/hardware.jpeg" alt=""></p>
 <p>Raspberry Pi 3b with GPIO pins connected to relevant relays.</p>
-<img src="../../img/g/chlorophyll/shortcuts.jpeg" width="80%">
-<p>iOS Shortcuts</p>
 </div>
 <div style="width: 50%">
 <p><img src="../../img/g/chlorophyll/website.jpeg" alt="">
@@ -1359,8 +1357,13 @@ body,
 </div>
 <div class="container">
 <div style="width: 50%">
+<img src="../../img/g/chlorophyll/shortcuts.jpeg" width="80%">
+<p>iOS Shortcuts</p>
 </div>
 <div style="width: 50%">
+<img src="../../img/g/chlorophyll/firebase.png" width="80%">
+<p>System state stored in Firebase Realtime database</p>
+</div>
 </div>
 </div>
 </div>
