@@ -24,18 +24,18 @@ Jump to:
 
 Ascent is an aircraft me and two friends designed to stabilize and land itself using only a set of two counter rotating propellers. Our goal was to achieve this using cheap electronics and hardware delivering the whole product for under ~$100. It was largely inspired by the work done with BPS Space's [Sprite Aircraft](https://www.youtube.com/watch?v=5kuLr_fbaNs).
 
-- Project goals:
-  1. Fly without oscillating
-  2. Hover at 5m
-  3. Land without tipping over
+Project goals:
+1. Fly without oscillating
+2. Hover at 5m
+3. Land without tipping over
 
 <h2 id="hw">Hardware and Electronics</h2>
 
 ### Hardware
 The two main hardware components we designed were the frame and a gimballed nozzle. The frame had to be light weight and durable, while able to easily carry all the electronics. The gimballed nozzle is crucial for redirecting thrust for thrust vector control.
 
-![](../../img/g/ascent/craft.png) <-- Full assembly of the craft.
-
+![](../../img/g/ascent/vehicle.PNG)
+![](../../img/g/ascent/craft.png)
 
 ![](../../img/g/ascent/gimbal.png)
 
