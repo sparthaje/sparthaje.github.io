@@ -2,8 +2,14 @@
 <div id="title">shreepa parthaje</div>
 <a id="return" href="../../index.html">&#8592; return home</a>
 <img id="profile" src="../../img/landing/profile.png"/>
+<script>
+const jumpto = (element) => {
+  document.getElementById(element.dataset.jumpto).scrollIntoView();
+}
+</script>
+<br/><br/><br/><br/>
 
-# Audio Processing Circuitry for Speaker
+# Audio Processing Circuitry for Power Speaker
 
 <div class="container">
 <div style="width: 30%; padding-right: 15px;">

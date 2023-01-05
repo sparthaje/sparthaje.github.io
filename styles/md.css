@@ -80,4 +80,31 @@ a {
     #return {
         top: 6%;
     }
+
+    #title {
+        font-size: 68px;
+    }
+
+    #return {
+        visibility: hidden;
+    }
+
+
+    h1 {
+        padding-top: 50px;
+        font-size: 68px !important;
+    }
+
+    h2 {
+        font-size: 58px !important;
+    }
+
+    h3 {
+        font-size: 50px !important;
+    }
+
+    p, li, #nav {
+        font-size: 48px !important;
+    }
+
 }

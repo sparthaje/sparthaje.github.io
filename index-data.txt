@@ -1,17 +1,15 @@
 {{TRACK 1}}
 <img title="{{3}}" class="image" src="{{1}}" draggable="false" style="width: {{0}};" onclick="window.location = '{{2}}';"/>
-45vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
-45vmin ; img/content/solarcar.jpg ; # ; Solar Powered Car
+56vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
+44vmin ; img/content/MigosNet.png ; pages/MigosNet/index.html ; ML writes Lyrics
 45vmin ; img/content/othello.jpg ; pages/othello/index.html ; Othello AI
 35vmin ; img/content/reverb.png ; https://activities.tjhsst.edu/cubesat/tjreverb.html ; TJ REVERB Satellite
-55vmin ; img/content/other.png ; # ; Check out my other projects!
 END
 
 {{TRACK 2}}
 <img title="{{3}}" class="image" src="{{1}}" draggable="false" style="width: {{0}};" onclick="window.location = '{{2}}';"/>
-42vmin ; img/content/ascent-cad.png ; pages/ascent/index.html ; VTOL Aircraft
-44vmin ; img/content/MigosNet.png ; https://sparthaje.github.io/MigosNet ; ML writes Lyrics
-46vmin ; img/content/ascent.jpeg ; pages/ascent/index.html ; VTOL Aircraft
+50vmin ; img/content/ascent-cad.png ; pages/ascent/index.html ; VTOL Aircraft
+54vmin ; img/content/solarcar.jpg ; https://www.solarcaratuva.org/ ; Solar Powered Car
 39vmin ; img/content/chlorophyll.png ; pages/chlorophyll/index.html ; Smart Home System
 44vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
 END
@@ -20,8 +18,8 @@ END
 <li class="{{1}}"><a {{2}}>{{0}}</a></li>
 Currently ; li-title ;
 Research / Teams ; li-header ;  
-🏎️ Cavalier Autonomous Racing ; li-item ;  
-☀️ UVA Solar Car Team ; li-item ;  
+🏎️ Cavalier Autonomous Racing ; li-item ;  href="https://autonomousracing.dev/"
+☀️ UVA Solar Car Team ; li-item ;  href="https://www.solarcaratuva.org/"
 Work & School ; li-header ;  
 📚 CS @ University of Virginia ; li-item ;  
 END
@@ -37,7 +35,7 @@ Robotics / Electronics ; li-header ;
 🎵 Power Speaker Circuitry ; li-item ; href="pages/speaker/index.html"
 
 Software ; li-header ;  
-🎼 MigosNet - Lyric Generation ; li-item ; href="https://sparthaje.github.io/MigosNet"
+🎼 MigosNet - Lyric Generation ; li-item ; href="pages/MigosNet/index.html"
 🎲 Othello AI ; li-item ;  href="pages/othello/index.html"
 📦 Opener ; li-item ; href="https://github.com/sparthaje/Opener"
 END
@@ -55,6 +53,6 @@ END
 
 {{LIST 4}}
 <li class="{{1}}"><a {{2}}>{{0}}</a></li>
-Other ; li-title ;
-• Other Projects ; li-item ; #
+Other ; li-title ; href="pages/other/index.html"
+• Other Projects ; li-item ; href="pages/other/index.html"
 END
