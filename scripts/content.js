@@ -2,7 +2,7 @@ let track = null;
 let track2 = null;
 let bg = null;
 
-const LEFT_BLOCKS = [-88, -80];
+const LEFT_BLOCKS = [-60, -52];
 const SCALER = 0.9;
 
 window.onload = () => {
