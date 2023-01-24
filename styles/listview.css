@@ -1,0 +1,97 @@
+/* https://codepen.io/sosuke/pen/Pjoqqp */
+
+#slide-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2vh;
+    
+    color: #555555;
+    background-color: rgb(243, 241, 241);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    
+    width: 10vw;
+    height: 3vh;
+
+    text-align: center;
+
+    transform: translate(45vw, 90vh);
+
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    cursor: pointer;
+}
+
+#slide-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.list-fill-animation {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.list {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 21vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+}
+
+.list > ul {
+    list-style-type: none; /* Remove bullets */
+}
+
+.li-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 3.3vh;
+}
+
+.li-title > a:hover {
+    color: #cc0000;
+}
+
+.li-title > a {
+    cursor: auto;
+}
+
+.li-header {
+    margin-bottom: 8px;
+    margin-top: 15px;
+    font-size: 3vh;
+}
+
+.li-header > a:hover {
+    color: #cc0000;
+}
+
+.li-header > a {
+    cursor: auto;
+}
+
+.li-item {
+    padding-left: 5px;
+    font-size: 2vh;
+    margin-bottom: 5px;
+}
+
+.li-item > a {
+    color: black;
+}
+
+.li-item > a:hover {
+    color: #770000;
+}
