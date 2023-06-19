@@ -1,5 +1,5 @@
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Avenir, Helvetica, sans-serif;
     font-size: 24px;
 
     height: 100vh;
@@ -7,6 +7,10 @@ body {
     background-color: #fafafa;
     margin: 0rem;
     overflow: hidden;
+}
+
+button {
+    font-family: Avenir, Helvetica, sans-serif;
 }
 
 a {
