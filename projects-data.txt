@@ -1,0 +1,59 @@
+{{TRACK 1}}
+<img title="{{3}}" class="image" src="{{1}}" draggable="false" style="width: {{0}};" onclick="window.location = '{{2}}';"/>
+60vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
+44vmin ; img/content/MigosNet.png ; pages/MigosNet/index.html ; ML writes Lyrics
+45vmin ; img/content/othello.jpg ; pages/othello/index.html ; Othello AI
+35vmin ; img/content/reverb.png ; https://activities.tjhsst.edu/cubesat/tjreverb.html ; TJ REVERB Satellite
+END
+
+{{TRACK 2}}
+<img title="{{3}}" class="image" src="{{1}}" draggable="false" style="width: {{0}};" onclick="window.location = '{{2}}';"/>
+62vmin ; img/content/solarcar.jpg ; https://www.solarcaratuva.org/ ; Solar Powered Car
+50vmin ; img/content/ascent-cad.png ; pages/ascent/index.html ; VTOL Aircraft
+39vmin ; img/content/chlorophyll.png ; pages/chlorophyll/index.html ; Smart Home System
+54vmin ; img/content/speaker.jpg ; pages/speaker/index.html ; Audio Processing
+END
+
+{{LIST 1}}
+<li class="{{1}}"><a {{2}}>{{0}}</a></li>
+Currently ; li-title ;
+Research / Teams ; li-header ;  
+🏎️ Cavalier Autonomous Racing ; li-item ;  href="https://autonomousracing.dev/"
+☀️ UVA Solar Car Team ; li-item ;  href="https://www.solarcaratuva.org/"
+Work & School ; li-header ;  
+📹 Autonomy Engineering Intern @ Skydio ; li-item ;
+📚 CS + Stats @ University of Virginia ; li-item ;  
+END
+
+{{LIST 2}}
+<li class="{{1}}"><a {{2}}>{{0}}</a></li>
+My Favorite Projects ; li-title ;  
+
+Robotics / Electronics ; li-header ;  
+# 🏋️ Barbell Path Analysis ; li-item ;  
+🚀 Ascent - VTOL Aircraft ; li-item ; href="pages/ascent/index.html"
+🍃 Chlorophyll Smart Home ; li-item ;  href="pages/chlorophyll/index.html"
+🎵 Power Speaker Circuitry ; li-item ; href="pages/speaker/index.html"
+
+Software ; li-header ;  
+🎼 MigosNet - Lyric Generation ; li-item ; href="pages/MigosNet/index.html"
+🎲 Othello AI ; li-item ;  href="pages/othello/index.html"
+📦 Opener ; li-item ; href="https://github.com/sparthaje/Opener"
+END
+
+{{LIST 3}}
+<li class="{{1}}"><a {{2}}>{{0}}</a></li>
+Previously ; li-title ;
+Research / Teams ; li-header ; 
+🛰️ TJ REVERB ; li-item ; href="https://activities.tjhsst.edu/cubesat/tjreverb.html"
+Work & School ; li-header ; 
+☁️ Intern @ AWS ; li-item ; href="https://aws.amazon.com/"
+🎒 Thomas Jefferson HS for Science and Technology ; li-item ; 
+🪧 Intern @ Capitol Canary ; li-item ; href="https://capitolcanary.com/"
+END
+
+{{LIST 4}}
+<li class="{{1}}"><a {{2}}>{{0}}</a></li>
+Other ; li-title ; href="pages/other/index.html"
+• Other Projects ; li-item ; href="pages/other/index.html"
+END

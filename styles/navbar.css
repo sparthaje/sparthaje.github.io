@@ -5,12 +5,13 @@
 #title {
     color:  #cc0000;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 0.8em;
     text-decoration: none;
     position: absolute;
-    left: calc(4% + 12.5vmin);
-    top: 3.5%;
+    left: calc(10vmin);
+    top: 4%;
 }
+
 
 #nav-links {
     left: calc(4% + 12.5vmin - var(--nav-gap));

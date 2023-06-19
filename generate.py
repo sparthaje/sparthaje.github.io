@@ -33,10 +33,10 @@ def load_data(data):
     return object
 
 def main():
-    template = open("index.template.html", "r").read().splitlines()
-    data = load_data(open("index-data.txt", "r").read().splitlines())
+    template = open("projects.template.html", "r").read().splitlines()
+    data = load_data(open("projects-data.txt", "r").read().splitlines())
 
-    output = open("index.html", "w")
+    output = open("projects.html", "w")
     for line in template:
         if "{{" not in line:
             output.write(line + "\n")
