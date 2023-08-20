@@ -37,3 +37,13 @@ a:hover {
     height: 100vh;
     background: linear-gradient(to right, #fcfcfc, #f8f8f8, #f0f0f0);
 }
+
+.mobile-only {
+    display: none;
+}
+/* Media query to show the extra element on small screens */
+@media screen and (max-width: 768px) {
+    .mobile-only {
+    display: block;
+    }
+}
