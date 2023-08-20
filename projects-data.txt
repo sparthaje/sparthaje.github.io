@@ -3,7 +3,7 @@
 60vmin ; img/content/car.jpg ; https://autonomousracing.dev/ ; Autonomous Racecar
 44vmin ; img/content/MigosNet.png ; pages/MigosNet/index.html ; ML writes Lyrics
 45vmin ; img/content/othello.jpg ; pages/othello/index.html ; Othello AI
-35vmin ; img/content/reverb.png ; https://activities.tjhsst.edu/cubesat/tjreverb.html ; TJ REVERB Satellite
+35vmin ; img/content/reverb.png ; https://tjhsst.fcps.edu/features/launch-tjreverb-culmination-seven-year-project-tj-space ; TJ REVERB Satellite
 END
 
 {{TRACK 2}}
@@ -45,7 +45,7 @@ END
 <li class="{{1}}"><a {{2}}>{{0}}</a></li>
 Previously ; li-title ;
 Research / Teams ; li-header ; 
-🛰️ TJ REVERB ; li-item ; href="https://activities.tjhsst.edu/cubesat/tjreverb.html"
+🛰️ TJ REVERB ; li-item ; href="https://tjhsst.fcps.edu/features/launch-tjreverb-culmination-seven-year-project-tj-space"
 Work & School ; li-header ; 
 ☁️ Intern @ AWS ; li-item ; href="https://aws.amazon.com/"
 🎒 Thomas Jefferson HS for Science and Technology ; li-item ; 
