@@ -21,6 +21,20 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
 
     <script type="module">
+        const desktopVideo = document.getElementById('desktop-video');
+        const mobileImage = document.getElementById('mobile-image');
+
+        // Check if the screen width is below a certain threshold (e.g., for mobile)
+        if (window.innerWidth <= 768) { // Adjust the value as needed
+            // Hide the video and show the image
+            desktopVideo.style.display = 'none';
+            mobileImage.style.display = 'block';
+        } else {
+            // Hide the image and show the video
+            mobileImage.style.display = 'none';
+            desktopVideo.style.display = 'block';
+        }
+
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
         import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-analytics.js";
@@ -41,14 +55,14 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         logEvent(analytics, "test");
-        console.log(analytics);
       </script>
     
 </head>
 <body>
     <div id="video-background">
         <div id="video-container">
-            <video id="video" src="img/landing/bg-compresssed.mp4" autoplay muted playsinline></video>
+            <video id="desktop-video" class="video" src="img/landing/bg-compresssed.mp4" autoplay muted playsinline></video>
+            <img id="mobile-image" class="video" src="img/landing/bg-compresssed.gif"/>
         </div>
     </div>
     <div id="content">
