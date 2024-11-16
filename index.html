@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,7 +9,7 @@
 
     <!-- Font AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-    
+
     <!-- MY STYLES -->
     <link rel="stylesheet" href="styles/theme.css">
     <link rel="stylesheet" href="styles/home.css">
@@ -38,53 +37,178 @@
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
         import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-analytics.js";
-      
+
         // yeah i know this isn't secure 🤷
         // work in progress haha
         const firebaseConfig = {
-          apiKey: "AIzaSyB-E524PWsGmHuI1YkXaXg6Cb79pWbp9MM",
-          authDomain: "shreepa-personal-website.firebaseapp.com",
-          projectId: "shreepa-personal-website",
-          storageBucket: "shreepa-personal-website.appspot.com",
-          messagingSenderId: "583301414224",
-          appId: "1:583301414224:web:13a9e81e8e2333422c0055",
-          measurementId: "G-RKW0LEYFVX"
+            apiKey: "AIzaSyB-E524PWsGmHuI1YkXaXg6Cb79pWbp9MM",
+            authDomain: "shreepa-personal-website.firebaseapp.com",
+            projectId: "shreepa-personal-website",
+            storageBucket: "shreepa-personal-website.appspot.com",
+            messagingSenderId: "583301414224",
+            appId: "1:583301414224:web:13a9e81e8e2333422c0055",
+            measurementId: "G-RKW0LEYFVX"
         };
-      
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         logEvent(analytics, "test");
-      </script>
-    
+    </script>
+
 </head>
+
 <body>
     <div id="video-background">
         <div id="video-container">
-            <video id="desktop-video" class="video" src="img/landing/bg-compresssed.mp4" autoplay muted playsinline></video>
-            <img id="mobile-image" class="video" src="img/landing/bg-compresssed.gif"/>
+            <video id="desktop-video" class="video" src="img/landing/bg-compresssed.mp4" autoplay muted
+                playsinline></video>
+            <img id="mobile-image" class="video" src="img/landing/bg-compresssed.gif" />
         </div>
     </div>
     <div id="content">
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <h1>Shreepa Parthaje</h1>
-        <!-- <h4 style="margin-top: 5px;">Perception AV Intern @ NVIDIA</h3> -->
-        <h4 style="margin-top: 5px;">Perception Lead @ Cavalier Autonomous Racing</h3>
-            <br/>
-            
-            <a href="docs/resume.pdf"><button>Resume</button></a>
-            <a href="projects.html"><button>Projects</button></a>
-            <div class="mobile-only" style="max-height: 10px;">
-                <br/>
+        <div id="header" class="scrollable-content">
+            <h1>Shreepa Parthaje</h1>
+            <h4 style="margin-top: 5px;">Perception Lead @ Cavalier Autonomous Racing</h4>
+            <div style="margin-top: 15px;">
+                <a href="docs/resume.pdf"><button>Resume</button></a>
+                <a href="docs/resume.pdf"><button>CV</button></a>
+                <a href="https://github.com/sparthaje"><button><i class="fab fa-github"></i></button></a>
+                <a href="https://linkedin.com/in/shreepa"><button><i class="fab fa-linkedin"></i></button></a>
+                <a href="mailto:shreepa.parthaje@gmail.com"><button><i class="fa fa-envelope"></i></button></a>
             </div>
-            <a href="https://github.com/sparthaje"><button><i class="fab fa-github"></i></button></a>
-            <a href="https://linkedin.com/in/shreepa"><button><i class="fab fa-linkedin"></i></button></a>
-            <a href="mailto:shreepa.parthaje@gmail.com"><button><i class="fa fa-envelope"></i></button></a>
-            
-        <h4 style="left: 0; bottom: 20px; position: fixed; text-align: center; width: 100%; color: #AAAAAA; font-size: 12px;">Autonomously recorded by the Skydio S2</h3>
+        </div>
+
+        <div class="scrollable-content">
+
+            <h2>Research and Projects</h2>
+            <br />
+
+            <div class="project-item">
+                <a href=""><img src="img/content/stitching.png" alt="Stitching"></a>
+                <div class="title-container">
+                    <a href="">
+                        <div class="title-tag" style="margin-top: 2px;">Lap by Lap - Stitching Trajectories for
+                            Autonomous Racing Overtakes</div>
+                    </a>
+                    <br />
+                    <div class="title-date"><span class="desc">Preprint</span> <span class="sep">~</span> November, 2024
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <a href=""><img src="img/content/tracker.png" alt="Tracker"></a>
+                <div class="title-container">
+                    <a href="">
+                        <div class="title-tag" style="margin-top: 2px;">AVTracker: Mutli-sensor fusion module for Indy
+                            Autonomous Challenge</div>
+                    </a>
+                    <br />
+                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> September, 2024
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <a href="pages/minsnapimitation/index.html"><img src="img/content/minsnap.png"
+                        alt="Min snap research"></a>
+                <div class="title-container">
+                    <a href="pages/minsnapimitation/index.html">
+                        <div class="title-tag" style="margin-top: 2px;">BoundaryPredictor: Imitating Cost-Minimized
+                            Trajectory Sampling for Autonomous Drone Racing</div>
+                    </a>
+                    <br />
+                    <div class="title-date"><span class="desc">Preprint</span> <span class="sep">~</span> May, 2024
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div class="project-item">
+                <a href="img/content/lvms2024_demo.mp4"><img src="img/content/overtake_lvms_2024.png"
+                        alt="Stitching"></a>
+                <div class="title-container">
+                    <a href="img/content/lvms2024_demo.mp4">
+                        <div class="title-tag" style="margin-top: 2px;">Perception for Autonomous Racing in >140 mph
+                            overtake</div>
+                    </a>
+                    <br />
+                    <div class="title-date"><span class="desc">Demo</span> <span class="sep">~</span> January, 2024
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div class="project-item">
+                <a href="pages/template/index.html"><img src="img/content/solarcar.jpg" alt="Solar Car"></a>
+                <div class="title-container">
+                    <a href="https://www.solarcaratuva.org">
+                        <div class="title-tag" style="margin-top: 2px;">Embedded Software @ UVA Solar Car</div>
+                    </a>
+                    <br />
+                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> 2023</div>
+                </div>
+            </div>
+
+            <br />
+            <div class="project-item">
+                <a href="pages/ascent/index.html"><img src="img/content/ascent.jpeg" alt="Ascent Setups"></a>
+                <div class="title-container">
+                    <a href="pages/ascent/index.html">
+                        <div class="title-tag">Ascent - Vertical Take-off and Landing Rocket</div>
+                    </a>
+                    <br />
+                    <div class="title-date"><span class="desc">HS Senior Research</span> <span class="sep">~</span> May,
+                        2020</div>
+                </div>
+            </div>
+            <br />
+
+            <div class="project-item">
+                <a href="pages/othello/index.html"><img src="img/content/othello.jpg" alt="Othello Board"></a>
+                <div class="title-container">
+                    <a href="pages/othello/index.html">
+                        <div class="title-tag">Othello AI with Binary Operations</div>
+                    </a>
+                    <br />
+                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> February, 2020
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div class="project-item">
+                <a href="pages/speaker/index.html"><img src="img/content/speaker.jpg" alt="Speaker circuit"></a>
+                <div class="title-container">
+                    <a href="pages/speaker/index.html">
+                        <div class="title-tag" style="margin-top: 10px;">Audio Power Amplifier Circuit</div>
+                    </a>
+                    <br />
+                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> November, 2019
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div class="project-item">
+                <a href="pages/chlorophyll/index.html"><img src="img/content/chlorophyll.png"
+                        alt="Smart home circuitry"></a>
+                <div class="title-container">
+                    <a href="pages/chlorophyll/index.html">
+                        <div class="title-tag" style="margin-top: 3px;">Smart Home Circuitry</div>
+                    </a>
+                    <br />
+                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> September, 2019
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-only" style="max-height: 10px;">
+            <br />
+        </div>
     </div>
 </body>
+
 </html>

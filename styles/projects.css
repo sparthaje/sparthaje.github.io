@@ -1,0 +1,43 @@
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.project-item img {
+    margin-right: 10px;
+    width: 200px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-tag {
+    /* font-weight: bold; */
+    font-size: 24px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.title-date {
+    margin-top: 5px; /* Ensures date is on a new line */
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+h1 {
+    color: #cc0000;
+}
+
+.sep {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #aaaaaa;
+}
+
+.desc {
+    font-style: italic;
+    font-weight: 575;
+}

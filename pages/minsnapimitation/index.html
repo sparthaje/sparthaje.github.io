@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoundaryPredictor</title>
+    <link rel="stylesheet" href="../../styles/academic-styles.css">
+</head>
+
+<body>
+    <a href="../../index.html" class="home-button">← Home</a>
+
+    <article class="paper-container">
+        <!-- Paper Title -->
+        <h1 class="paper-title">BoundaryPredictor: Imitating Cost-Minimized Trajectory Sampling for Autonomous Drone
+            Racing</h1>
+
+        <!-- Authors -->
+        <div class="author-list">
+            <span class="author">Shreepa Parthaje</span>
+            <span class="author"><a href="https://www.bezzorobotics.com/">Nicola Bezzo</a></span>
+        </div>
+
+        <!-- Links Bar -->
+        <nav class="links-bar">
+            <a href="../../docs/Generating_Optimal_Boundary_Conditions_for_Min_Snap_Trajectories.pdf"
+                class="link-item">Paper</a>
+            <a href="#" class="link-item">Code</a>
+            <a href="#" class="link-item">BibTeX</a>
+        </nav>
+
+        <!-- Main Content Sections -->
+        <section>
+            <div class="figure-container">
+                <img src="../../img/content/minsnap.png" alt="Diagram">
+                <p class="figure-caption">Figure 1. Completion of a gate course in sim using BoundaryPredictor</p>
+            </div>
+
+            <h2 class="section-title">Motivation</h2>
+            <p>
+                Drone racing traditionally features human FPV drone racers practicing on one specific course and then
+                demonstrating agile flying techniques to complete the course as fast as possible. Similarly, autonomous
+                drone racing research has demonstrated it is possible to get results comparable to humans when allowing
+                an algorithm to learn in this fixed environment over many episodes <a
+                    href="https://www.nature.com/articles/s41586-023-06419-4">(Kaufmann et al.
+                    (2023))</a>.
+            </p>
+            <p>
+                My work is motivated by the idea that through observation of a variety of gate courses, we can build a
+                world model for drone racing that generalizes which agile trajectories can solve which gate course
+                setup. In this work, specifically, we do this through repeated sampling of trajectories in simulation to
+                find "optimal" trajectories for a variety of gate courses. This leaves us with a cost-minimized dataset
+                to learn to imitate. We introduce the concept of a weighted loss function which helps push any error in
+                trajectory imitation towards slower-safe trajectories than faster-unsafe trajectories.
+            </p>
+
+            <h2 class="section-title">BoundaryPredictor in Simulation</h2>
+            <div class="figure-grid" style="margin-top: -2rem;">
+                <div class="figure-container">
+                    <video controls>
+                        <source src="videos/exp_0.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="figure-caption">Video 1. Accelerating through straight course, max speed 1.3
+                        ms<sup>-1</sup>
+                    </p>
+                </div>
+                <div class="figure-container">
+                    <video controls>
+                        <source src="videos/exp_1.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="figure-caption">Video 2. Navigating through a curved course, requiring high jerk</p>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: -3rem;;">BoundaryPredictor in Real Life</h2>
+            <div class="figure-container">
+                <video controls>
+                    <source src="videos/real.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="figure-caption">Video 3. Navigating through a curved course, requiring high jerk (same course
+                    as Video 2
+                    example)</p>
+            </div>
+
+            <h2 class="section-title">Sim2Real</h2>
+
+            <div class="figure-container">
+                <img src="figs/commands.png" alt="Diagram">
+                <p class="figure-caption">Figure 2: Observed states in Video 2 and 3 compared to commanded state</p>
+            </div>
+
+            <div class="figure-container">
+                <img src="figs/error.png" alt="Diagram">
+                <p class="figure-caption">Figure 3. Error in states in Video 2 and 3 compared to commanded state</p>
+            </div>
+
+            <div class="figure-container">
+                <img src="figs/bev.png" alt="Diagram">
+                <p class="figure-caption">Figure 4. Birds-eye-view of trajectory taken in Video 2 and 3</p>
+            </div>
+
+        </section>
+
+    </article>
+</body>
+
+</html>

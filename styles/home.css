@@ -32,15 +32,31 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0);
 }
 
+/* Modified content section to allow scrolling */
 #content {
-    position: relative;
-    z-index: 1;
+    position: relative;  /* Changed from absolute to relative */
+    margin: 20vh auto 0;  /* Changed from top positioning to margin */
+    width: 80%;  /* Added width constraint */
+    max-width: 1200px;  /* Added max-width for larger screens */
+    text-align: left;
     color: #ffffff;
-    text-align: center;
-    padding: 20px;
+    z-index: 1;
+}
+
+.scrollable-content {
+    margin-top: 2rem;
+    padding: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.05);  /* Semi-transparent background */
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;  
+    border-bottom-right-radius: 12px;
 }
 
 button {
@@ -51,13 +67,59 @@ button {
     color: white;
     background-color: transparent;
     border-radius: 4px;
-    
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 0.2rem;
 }
 
-
-button:hover{
+button:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.project-item img {
+    margin-right: 10px;
+    width: 200px;
+    border-radius: 4px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-tag {
+    /* font-weight: bold; */
+    font-size: 24px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    text-decoration: underline;
+}
+
+.title-date {
+    margin-top: 5px; /* Ensures date is on a new line */
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.sep {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #aaaaaa;
+}
+
+.desc {
+    font-style: italic;
+    font-weight: 575;
 }

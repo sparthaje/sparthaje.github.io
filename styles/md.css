@@ -47,7 +47,7 @@ a {
     font-size: 20px;
     position: absolute;
     left: calc(4% + 12.5vmin);
-    top: 9%;
+    top: 7%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
 }
@@ -70,7 +70,7 @@ a {
     cursor: pointer;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     body {
         padding-left: 0vw;
         padding-right: 0vw;
@@ -82,7 +82,7 @@ a {
     }
 
     #title {
-        font-size: 68px;
+        font-size: 32px;
     }
 
     #return {
@@ -92,7 +92,7 @@ a {
 
     h1 {
         padding-top: 50px;
-        font-size: 68px !important;
+        font-size: 32px !important;
     }
 
     h2 {
@@ -107,4 +107,4 @@ a {
         font-size: 48px !important;
     }
 
-}
+} */
