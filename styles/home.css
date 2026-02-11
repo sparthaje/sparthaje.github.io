@@ -50,11 +50,6 @@ body {
     pointer-events: none;
 }
 
-/* Mobile videos section - hidden on desktop */
-.mobile-videos {
-    display: none;
-}
-
 /* Content Section - Two Columns */
 .content-wrapper {
     display: flex;
@@ -186,20 +181,6 @@ section h2 {
         display: none;
     }
 
-    /* Show mobile videos section at bottom */
-    .mobile-videos {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 50px;
-    }
-
-    .mobile-videos .image-box.rectangle {
-        display: block;
-        width: 100%;
-        height: 250px;
-    }
-
     /* Stack image */
     .header-images {
         margin-bottom: 30px;
@@ -242,9 +223,5 @@ section h2 {
 
     section h2 {
         font-size: 22px;
-    }
-
-    .mobile-videos .image-box.rectangle {
-        height: 200px;
     }
 }
