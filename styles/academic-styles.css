@@ -6,6 +6,7 @@
     --link-color: #cc0000;
     --link-color-hover: #770000;
     --max-width: 800px;
+    background-color: rgb(250, 249, 245);
 }
 
 .paper-container {
@@ -121,27 +122,6 @@
     .paper-title {
         font-size: 1.5rem;
     }
-}
-
-.home-button {
-    position: fixed;
-    top: 20px;
-    left: 50px;
-    background-color: white;
-    color: #cc0000;
-    padding: 0.5rem 2rem;
-    text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    z-index: 1000;
-    font-family: Arial, sans-serif;
-}
-
-.home-button:hover {
-    background-color: #990000;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    color: white;
 }
 
 section p {

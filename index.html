@@ -1,210 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Shreepa Parthaje's personal website and portfolio">
-
-    <!-- Font AWESOME -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreepa Parthaje</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-
-    <!-- MY STYLES -->
-    <link rel="stylesheet" href="styles/theme.css">
     <link rel="stylesheet" href="styles/home.css">
 
-    <title>Shreepa Parthaje</title>
-
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
-
-    <script type="module">
-        const desktopVideo = document.getElementById('desktop-video');
-        const mobileImage = document.getElementById('mobile-image');
-
-        // Check if the screen width is below a certain threshold (e.g., for mobile)
-        if (window.innerWidth <= 768) { // Adjust the value as needed
-            // Hide the video and show the image
-            desktopVideo.style.display = 'none';
-            mobileImage.style.display = 'block';
-        } else {
-            // Hide the image and show the video
-            mobileImage.style.display = 'none';
-            desktopVideo.style.display = 'block';
-        }
-
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
-        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-analytics.js";
-
-        // yeah i know this isn't secure 🤷
-        // work in progress haha
-        const firebaseConfig = {
-            apiKey: "AIzaSyB-E524PWsGmHuI1YkXaXg6Cb79pWbp9MM",
-            authDomain: "shreepa-personal-website.firebaseapp.com",
-            projectId: "shreepa-personal-website",
-            storageBucket: "shreepa-personal-website.appspot.com",
-            messagingSenderId: "583301414224",
-            appId: "1:583301414224:web:13a9e81e8e2333422c0055",
-            measurementId: "G-RKW0LEYFVX"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        logEvent(analytics, "test");
-    </script>
-
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="icon" href="img/favicon/favicon.ico">
 </head>
 
 <body>
-    <div id="video-background">
-        <div id="video-container">
-            <video id="desktop-video" class="video" src="img/landing/bg-compresssed.mp4" autoplay muted
-                playsinline></video>
-            <img id="mobile-image" class="video" src="img/landing/bg-compresssed.gif" />
+    <div class="container">
+        <!-- Header Images -->
+        <div class="header-images">
+            <img class="image-box square" src="img/landing/profile_small.jpeg" alt="Profile" />
+            <div class="image-box rectangle">
+                <video autoplay loop muted playsinline>
+                    <source src="img/landing/bg_small.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="image-box rectangle">
+                <video autoplay loop muted playsinline>
+                    <source src="img/landing/racing_small.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Two Column Content -->
+        <div class="content-wrapper">
+            <div class="left-column">
+                <div class="header-content">
+                    <h1>Shreepa Parthaje</h1>
+                    <h3>Perception @ NVIDIA</h3>
+                    <br />
+                    <div class="social-links">
+                        <a href="docs/resume.pdf"><button>CV</button></a>
+                        <a href="https://github.com/sparthaje"><button><i class="fab fa-github"></i></button></a>
+                        <a href="https://linkedin.com/in/shreepa"><button><i class="fab fa-linkedin"></i></button></a>
+                        <a href="mailto:shreepa.parthaje@gmail.com"><button><i class="fa fa-envelope"></i></button></a>
+                    </div>
+                    <p id="biography" class="bio"></p>
+
+                </div>
+            </div>
+
+            <div class="right-column">
+                <section id="research-section">
+                    <h2>Research</h2>
+                    <div id="research-list" class="project-list"></div>
+                </section>
+
+                <section id="projects-section">
+                    <h2>Projects</h2>
+                    <div id="projects-list" class="project-list"></div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Mobile Videos Section (shown only on mobile at bottom) -->
+        <div class="mobile-videos">
+            <div class="image-box rectangle">
+                <video autoplay loop muted playsinline>
+                    <source src="img/landing/bg-compresssed.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="image-box rectangle">
+                <video autoplay loop muted playsinline>
+                    <source src="img/landing/racing.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </div>
-    <div id="content">
-        <div id="header" class="scrollable-content">
-            <h1>Shreepa Parthaje</h1>
-            <h4 style="margin-top: 5px;">Perception Lead @ Cavalier Autonomous Racing</h4>
-            <div style="margin-top: 15px;">
-                <a href="docs/resume.pdf"><button>Resume</button></a>
-                <a href="docs/resume.pdf"><button>CV</button></a>
-                <a href="https://github.com/sparthaje"><button><i class="fab fa-github"></i></button></a>
-                <a href="https://linkedin.com/in/shreepa"><button><i class="fab fa-linkedin"></i></button></a>
-                <a href="mailto:shreepa.parthaje@gmail.com"><button><i class="fa fa-envelope"></i></button></a>
-            </div>
-        </div>
 
-        <div class="scrollable-content">
-
-            <h2>Research</h2>
-
-            <br />
-            <div class="project-item">
-                <a href="pages/minsnapimitation/index.html"><img src="img/content/minsnap.png"
-                        alt="Min snap research"></a>
-                <div class="title-container">
-                    <a href="pages/minsnapimitation/index.html">
-                        <div class="title-tag" style="margin-top: 2px;">BoundaryPredictor: Imitating Cost-Minimized
-                            Trajectory Sampling for Autonomous Drone Racing</div>
-                    </a>
-                    <br />
-                    <div class="title-date"><span class="desc">Preprint</span> <span class="sep">~</span> May, 2024
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="scrollable-content">
-
-            <h2>Projects</h2>
-
-            <!-- <br />
-            <div class="project-item">
-                <a href=""><img src="img/content/tracker.png" alt="Tracker"></a>
-                <div class="title-container">
-                    <a href="">
-                        <div class="title-tag">PerceptionLabels: Python Utility for Converting GPS data of other agents
-                        </div>
-                    </a>
-                    <br />
-                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> September, 2024
-                    </div>
-                </div>
-            </div>
-
-            <br />
-            <div class="project-item">
-                <a href=""><img src="img/content/tracker.png" alt="Tracker"></a>
-                <div class="title-container">
-                    <a href="">
-                        <div class="title-tag">AVTracker: Mutli-sensor fusion module for Indy
-                            Autonomous Challenge</div>
-                    </a>
-                    <br />
-                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> September, 2024
-                    </div>
-                </div>
-            </div> -->
-
-            <br />
-            <div class="project-item">
-                <a href="img/content/lvms2024_demo.mp4"><img src="img/content/overtake_lvms_2024.png"
-                        alt="Stitching"></a>
-                <div class="title-container">
-                    <a href="img/content/lvms2024_demo.mp4">
-                        <div class="title-tag">Perception for Autonomous Racing in >140 mph
-                            overtake</div>
-                    </a>
-                    <br />
-                    <div class="title-date"><span class="desc">Demo</span> <span class="sep">~</span> January, 2024
-                    </div>
-                </div>
-            </div>
-
-            <br />
-            <div class="project-item">
-                <a href="pages/ascent/index.html"><img src="img/content/ascent.jpeg" alt="Ascent Setups"></a>
-                <div class="title-container">
-                    <a href="pages/ascent/index.html">
-                        <div class="title-tag">Ascent - Vertical Take-off and Landing Rocket</div>
-                    </a>
-                    <br />
-                    <div class="title-date"><span class="desc">HS Senior Research</span> <span class="sep">~</span> May,
-                        2020</div>
-                </div>
-            </div>
-            <br />
-
-            <div class="project-item">
-                <a href="pages/othello/index.html"><img src="img/content/othello.jpg" alt="Othello Board"></a>
-                <div class="title-container">
-                    <a href="pages/othello/index.html">
-                        <div class="title-tag">Othello AI with Binary Operations</div>
-                    </a>
-                    <br />
-                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> February, 2020
-                    </div>
-                </div>
-            </div>
-
-            <br />
-            <div class="project-item">
-                <a href="pages/speaker/index.html"><img src="img/content/speaker.jpg" alt="Speaker circuit"></a>
-                <div class="title-container">
-                    <a href="pages/speaker/index.html">
-                        <div class="title-tag" style="margin-top: 10px;">Audio Power Amplifier Circuit</div>
-                    </a>
-                    <br />
-                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> November, 2019
-                    </div>
-                </div>
-            </div>
-
-            <br />
-            <div class="project-item">
-                <a href="pages/chlorophyll/index.html"><img src="img/content/chlorophyll.png"
-                        alt="Smart home circuitry"></a>
-                <div class="title-container">
-                    <a href="pages/chlorophyll/index.html">
-                        <div class="title-tag" style="margin-top: 3px;">Smart Home Circuitry</div>
-                    </a>
-                    <br />
-                    <div class="title-date"><span class="desc">Project</span> <span class="sep">~</span> September, 2019
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mobile-only" style="max-height: 10px;">
-            <br />
-        </div>
-    </div>
+    <script src="scripts/home.js"></script>
 </body>
 
 </html>
